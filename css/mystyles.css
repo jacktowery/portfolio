@@ -25,6 +25,9 @@ $input-shadow: none;
 .long {
   margin-bottom: 0.5em; }
 
+.navbar .navbar-brand a.navbar-item img {
+  max-height: 4rem !important; }
+
 /*
 h1 {
     font-family: 'Ubuntu Mono', monospace !important;
@@ -424,10 +427,10 @@ table th {
   overflow: hidden !important; }
 
 .is-size-1 {
-  font-size: 3rem !important; }
+  font-size: 4.5rem !important; }
 
 .is-size-2 {
-  font-size: 2.5rem !important; }
+  font-size: 3rem !important; }
 
 .is-size-3 {
   font-size: 2rem !important; }
@@ -446,9 +449,9 @@ table th {
 
 @media screen and (max-width: 768px) {
   .is-size-1-mobile {
-    font-size: 3rem !important; }
+    font-size: 4.5rem !important; }
   .is-size-2-mobile {
-    font-size: 2.5rem !important; }
+    font-size: 3rem !important; }
   .is-size-3-mobile {
     font-size: 2rem !important; }
   .is-size-4-mobile {
@@ -462,9 +465,9 @@ table th {
 
 @media screen and (min-width: 769px), print {
   .is-size-1-tablet {
-    font-size: 3rem !important; }
+    font-size: 4.5rem !important; }
   .is-size-2-tablet {
-    font-size: 2.5rem !important; }
+    font-size: 3rem !important; }
   .is-size-3-tablet {
     font-size: 2rem !important; }
   .is-size-4-tablet {
@@ -478,9 +481,9 @@ table th {
 
 @media screen and (max-width: 1087px) {
   .is-size-1-touch {
-    font-size: 3rem !important; }
+    font-size: 4.5rem !important; }
   .is-size-2-touch {
-    font-size: 2.5rem !important; }
+    font-size: 3rem !important; }
   .is-size-3-touch {
     font-size: 2rem !important; }
   .is-size-4-touch {
@@ -494,9 +497,9 @@ table th {
 
 @media screen and (min-width: 1088px) {
   .is-size-1-desktop {
-    font-size: 3rem !important; }
+    font-size: 4.5rem !important; }
   .is-size-2-desktop {
-    font-size: 2.5rem !important; }
+    font-size: 3rem !important; }
   .is-size-3-desktop {
     font-size: 2rem !important; }
   .is-size-4-desktop {
@@ -510,9 +513,9 @@ table th {
 
 @media screen and (min-width: 1280px) {
   .is-size-1-widescreen {
-    font-size: 3rem !important; }
+    font-size: 4.5rem !important; }
   .is-size-2-widescreen {
-    font-size: 2.5rem !important; }
+    font-size: 3rem !important; }
   .is-size-3-widescreen {
     font-size: 2rem !important; }
   .is-size-4-widescreen {
@@ -526,9 +529,9 @@ table th {
 
 @media screen and (min-width: 1472px) {
   .is-size-1-fullhd {
-    font-size: 3rem !important; }
+    font-size: 4.5rem !important; }
   .is-size-2-fullhd {
-    font-size: 2.5rem !important; }
+    font-size: 3rem !important; }
   .is-size-3-fullhd {
     font-size: 2rem !important; }
   .is-size-4-fullhd {
@@ -3608,9 +3611,9 @@ a.tag:hover {
   .title:not(.is-spaced) + .subtitle {
     margin-top: -1.25rem; }
   .title.is-1 {
-    font-size: 3rem; }
+    font-size: 4.5rem; }
   .title.is-2 {
-    font-size: 2.5rem; }
+    font-size: 3rem; }
   .title.is-3 {
     font-size: 2rem; }
   .title.is-4 {
@@ -3633,9 +3636,9 @@ a.tag:hover {
   .subtitle:not(.is-spaced) + .title {
     margin-top: -1.25rem; }
   .subtitle.is-1 {
-    font-size: 3rem; }
+    font-size: 4.5rem; }
   .subtitle.is-2 {
-    font-size: 2.5rem; }
+    font-size: 3rem; }
   .subtitle.is-3 {
     font-size: 2rem; }
   .subtitle.is-4 {

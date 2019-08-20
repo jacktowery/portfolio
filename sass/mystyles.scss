@@ -35,6 +35,8 @@ $pink: #FC5B73;
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:700');
+$size-1: 4.5rem;
+$size-2: 3rem;
 
 // Update Bulma's global variables
 $primary: $pink;
@@ -42,6 +44,10 @@ $family-sans-serif: "Nunito", sans-serif;
 
 .long {
     margin-bottom: 0.5em;
+}
+
+.navbar .navbar-brand a.navbar-item img {
+    max-height: 4rem !important;
 }
 
 /*
