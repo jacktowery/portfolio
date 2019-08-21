@@ -30,17 +30,42 @@ $input-shadow: none;
 
 // Brand Colors
 $pink: #FC5B73;
+$aqua: #019283;
 
 // Brand Fonts
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:700');
+//@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:700');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:700,700i&display=swap');
 $size-1: 4.5rem;
 $size-2: 3rem;
 
 // Update Bulma's global variables
-$primary: $pink;
-$family-sans-serif: "Nunito", sans-serif;
+$primary: $aqua;
+$link: $aqua;
+$family-sans-serif: 'Nunito', sans-serif;
+$family-primary: $family-sans-serif;
+$family-secondary: 'Noto Sans', 'Nunito', sans-serif;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/bulma.sass";
+
+// Overwrite some rules for customization
+.my-text-white, .my-text-white > *, .my-text-white > * > * {
+    color: #ffffff !important;
+}
+
+.section.is-primary {
+    background-color: $primary;
+    color: #fff;
+    h1,h2,h3,h4,h5,h6,p,a,strong,em {
+        color: #fff;
+    }
+}
+
+strong {
+    font-weight: 700 !important;
+}
 
 .long {
     margin-bottom: 0.5em;
@@ -50,11 +75,15 @@ $family-sans-serif: "Nunito", sans-serif;
     max-height: 4rem !important;
 }
 
-/*
-h1 {
-    font-family: 'Ubuntu Mono', monospace !important;
+.logo-rollover svg {
+    transition: 0.3s;
 }
-*/
 
-// Import only what you need from Bulma
-@import "../node_modules/bulma/bulma.sass";
+.logo-rollover:hover svg {
+    fill: $primary;
+}
+
+a {
+    transition: 0.3s;
+}
+
