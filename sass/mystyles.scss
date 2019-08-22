@@ -37,8 +37,8 @@ $aqua: #019283;
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700');
 //@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:700');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:700,700i&display=swap');
-$size-1: 4.5rem;
-$size-2: 3rem;
+//$size-1: 4.5rem;
+//$size-2: 3rem;
 
 // Update Bulma's global variables
 $primary: $aqua;
@@ -47,8 +47,14 @@ $family-sans-serif: 'Nunito', sans-serif;
 $family-primary: $family-sans-serif;
 $family-secondary: 'Noto Sans', 'Nunito', sans-serif;
 
+$box-radius: 20px;
+$box-shadow: none;
+
+
+// ------------------------------------------------------
 // Import only what you need from Bulma
 @import "../node_modules/bulma/bulma.sass";
+// ------------------------------------------------------
 
 // Overwrite some rules for customization
 .my-text-white, .my-text-white > *, .my-text-white > * > * {
@@ -71,10 +77,6 @@ strong {
     margin-bottom: 0.5em;
 }
 
-.navbar .navbar-brand a.navbar-item img {
-    max-height: 4rem !important;
-}
-
 .logo-rollover svg {
     transition: 0.3s;
 }
@@ -85,5 +87,23 @@ strong {
 
 a {
     transition: 0.3s;
+}
+
+// SPACING & KERNING
+.is-family-primary {
+    letter-spacing: 0px;
+}
+
+.is-family-secondary {
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    line-height: 1.5 !important;
+}
+
+// SECTIONS
+#summary {
+    margin-top: -150px;
 }
 
