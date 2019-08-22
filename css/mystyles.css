@@ -6981,7 +6981,8 @@ a {
   letter-spacing: -1px; }
 
 .subtitle {
-  line-height: 1.5 !important; }
+  line-height: 1.4 !important; }
 
 #summary {
-  margin-top: -150px; }
+  padding-top: 0px;
+  margin-top: -45px; }
