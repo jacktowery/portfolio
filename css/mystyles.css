@@ -6986,3 +6986,6 @@ a {
 #summary {
   padding-top: 0px;
   margin-top: -45px; }
+
+html.sr .load-hidden {
+  visibility: hidden; }

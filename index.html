@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="sr">
 
 <head>
     <meta charset="utf-8">
@@ -26,6 +26,13 @@
 
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script>
+        //Reset at top of page
+        ScrollReveal({
+            reset: true
+        });
+    </script>
     <script>
         $(document).ready(function () {
             // Add smooth scrolling to all links
@@ -109,11 +116,12 @@
                             Mobile/Web Developer</h1>
                         <h2 class="subtitle is-size-4-desktop">I design websites, apps, brands, graphics, and more.</h2>
                         <!--<img src="assets/logos/hex-black.svg" alt="logo" height="200px" width="200px">-->
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
-                            style="enable-background:new 0 0 400 400;" xml:space="preserve" height="200px" width="200px"
-                            fill="#000000">
-                            <path d="M253.6,0l-200,53.6L0,253.6L146.4,400l200-53.6l53.6-200L253.6,0z M330.4,330.4l-178.2,47.7L21.8,247.7L69.6,69.6
+                        <div class="r-spin-grow-1 load-hidden">
+                            <svg version="1.1" id="Layer1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
+                                style="enable-background:new 0 0 400 400;" xml:space="preserve" height="200px"
+                                width="200px" fill="#000000">
+                                <path d="M253.6,0l-200,53.6L0,253.6L146.4,400l200-53.6l53.6-200L253.6,0z M330.4,330.4l-178.2,47.7L21.8,247.7L69.6,69.6
 	l178.2-47.7l130.4,130.4L330.4,330.4z M302.1,182.4c-6.4-4-16.5-5.9-30.5-5.9l-10.8,0.2c-2,0-3-0.5-3-1.5c0.1-1.1,0.6-2.8,1.3-5.1
 	l5.3-7.4c1.1-1.8,1.7-3.1,1.7-3.8c0-2.1-2.5-3.2-7.6-3.2c-5.1,0-8.1,0.8-8.9,2.5L235,177.7c-9.9,0.8-19.3,1.6-28.1,2.6
 	c0.8-1.1,1.6-2.2,2.4-3.3c9.3-13,16.1-22.5,20.6-28.5c4.4-6,6.7-9.3,6.7-9.9c0-1.1-0.9-1.8-2.8-1.9l-9.1-0.4c-3,0-4.9,1.1-5.9,3.2
@@ -130,7 +138,8 @@
 	c0-4.4,7.4-14.3,22.1-29.8c14.8-15.5,23.7-23.2,26.8-23.2c0.3,0,0.4,0.1,0.4,0.4C156.1,222.5,148.9,231.7,134.5,248.7z M232.9,117.4
 	c0-4.2,2.5-8.4,7.6-12.4c5.1-4,9.3-6,12.5-6c1.4,0,2.3,0.3,2.8,0.8c2,2.4,3,4.3,3,5.8c0,1.5-0.4,2.8-1.3,3.8
 	c-0.8,1.1-1.9,2.3-3.1,3.6c-1.2,1.3-3.6,3.2-7.2,5.5c-3.6,2.3-7.1,3.5-10.5,3.5C234.1,121.7,232.9,120.1,232.9,117.4z" />
-                        </svg>
+                            </svg>
+                        </div>
                     </div>
                 </div>
 
@@ -145,11 +154,11 @@
                     <h1 class="title is-family-secondary is-spaced is-size-3-desktop is-size-4-mobile">Hey, I'm Jack.
                         Nice to meet you.</h1>
                     <h2 class="subtitle is-size-5-desktop">
-                        Soon after I started my first project in Inkscape over 7 years ago, I've worked hard to teach
-                        myself the concepts of graphic design, and I then discovered my passion to combine design with
+                        I started my first project in Inkscape over 7 years ago. Since then, I've worked hard to teach
+                        myself the concepts of graphic design, and I've discovered my passion to combine them with
                         programming concepts I learned while earning my degree. I've had the opportunity to create
-                        content and branding for non-profit organizations and startups, and I'm always ready to learn
-                        something new.
+                        content and branding for non-profit organizations and startups, and I'm always looking for
+                        something new to learn.
                     </h2>
                 </div>
             </div>
@@ -163,21 +172,24 @@
                 <div class="content">
                     <div class="columns is-centered">
                         <div class="column">
-                            <h1 class="title is-size-4 is-spaced is-family-secondary">Graphic Designer</h1>
+                            <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-1">Graphic
+                                Designer</h1>
                             <p class="is-size-5">Lorem ipsum dolor sit amet</p>
                             <p class="is-size-5">Lorem ipsum dolor sit amet</p>
                             <p class="is-size-5">Lorem ipsum dolor sit amet</p>
                             <p class="is-size-5">Lorem ipsum dolor sit amet</p>
                         </div>
                         <div class="column">
-                            <h1 class="title is-size-4 is-spaced is-family-secondary">Web/Mobile Developer</h1>
+                            <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-2">
+                                Web/Mobile Developer</h1>
                             <p class="is-size-5">Lorem ipsum dolor sit amet</p>
                             <p class="is-size-5">Lorem ipsum dolor sit amet</p>
                             <p class="is-size-5">Lorem ipsum dolor sit amet</p>
                             <p class="is-size-5">Lorem ipsum dolor sit amet</p>
                         </div>
                         <div class="column">
-                            <h1 class="title is-size-4 is-spaced is-family-secondary">Student Researcher</h1>
+                            <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-3">Student
+                                Researcher</h1>
                             <p class="is-size-5">Lorem ipsum dolor sit amet</p>
                             <p class="is-size-5">Lorem ipsum dolor sit amet</p>
                             <p class="is-size-5">Lorem ipsum dolor sit amet</p>
@@ -190,6 +202,7 @@
     </section>
 
     <script src="js/navbar.js"></script>
+    <script src="js/scrollReveal.js"></script>
 </body>
 
 </html>
