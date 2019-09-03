@@ -49,6 +49,7 @@ $family-secondary: 'Noto Sans', 'Nunito', sans-serif;
 
 $box-radius: 20px;
 $box-shadow: none;
+$navbar-height: 5rem;
 
 
 // ------------------------------------------------------
@@ -89,7 +90,7 @@ a {
     transition: 0.3s;
 }
 
-// SPACING & KERNING
+// FONT SPACING & KERNING
 .is-family-primary {
     letter-spacing: 0px;
 }
@@ -102,10 +103,21 @@ a {
     line-height: 1.4 !important;
 }
 
+.is-bold {
+    font-weight: 600 !important;
+}
+
+.is-bolder {
+    font-weight: 700 !important;
+}
+
 // SECTIONS
 #summary {
     padding-top: 0px;
     margin-top: -45px;
+}
+.has-padding-1 {
+    margin: 30px !important;
 }
 
 // SCROLL REVEAL
