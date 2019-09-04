@@ -1169,7 +1169,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 .box {
   background-color: white;
   border-radius: 20px;
-  box-shadow: none;
+  box-shadow: 0 6px 6px 0 #dfdfdf80, 0 0 0 1px #dfdfdf;
   color: #4a4a4a;
   display: block;
   padding: 1.25rem; }
@@ -6995,6 +6995,20 @@ a {
 
 .has-padding-1 {
   margin: 30px !important; }
+
+.is-column-has-border {
+  border-right: 0px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf; }
+  @media screen and (min-width: 1088px) {
+    .is-column-has-border {
+      border-right: 1px solid #dfdfdf;
+      border-bottom: 0px solid #dfdfdf; } }
+
+.box-no-padding {
+  padding: 0 !important; }
+
+.columns {
+  margin: 0 !important; }
 
 html.sr .load-hidden {
   visibility: hidden; }

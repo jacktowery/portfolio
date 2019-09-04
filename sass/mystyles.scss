@@ -48,8 +48,9 @@ $family-primary: $family-sans-serif;
 $family-secondary: 'Noto Sans', 'Nunito', sans-serif;
 
 $box-radius: 20px;
-$box-shadow: none;
+$box-shadow: 0 6px 6px 0 #dfdfdf80, 0 0 0 1px #dfdfdf;
 $navbar-height: 5rem;
+
 
 
 // ------------------------------------------------------
@@ -118,6 +119,25 @@ a {
 }
 .has-padding-1 {
     margin: 30px !important;
+}
+
+// COLUMN LAYOUTS
+.is-column-has-border {
+    @media screen and (min-width: 1088px) {
+        border-right: 1px solid #dfdfdf;
+        border-bottom: 0px solid #dfdfdf;
+    }
+    border-right: 0px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    
+}
+
+.box-no-padding {
+    padding: 0 !important;
+}
+
+.columns {
+    margin: 0 !important;
 }
 
 // SCROLL REVEAL
