@@ -29,14 +29,12 @@
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script>
         //Reset at top of page
-        ScrollReveal({
-            reset: true
-        });
+        //ScrollReveal({ reset: true });
     </script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
+            $("a").on('click', function(event) {
                 // Make sure this.hash has a value before overriding default behavior
                 if (this.hash !== "") {
                     // Prevent default anchor click behavior
@@ -47,7 +45,7 @@
                     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
-                    }, 800, function () {
+                    }, 800, function() {
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         window.location.hash = hash;
                     });
@@ -65,10 +63,8 @@
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item logo-rollover" href="/">
-                    <svg version="1.1" id="corner-logo" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
-                        style="enable-background:new 0 0 400 400;" xml:space="preserve" height="50px" width="50px"
-                        fill="#000000">
+                    <svg version="1.1" id="corner-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
+                        style="enable-background:new 0 0 400 400;" xml:space="preserve" height="50px" width="50px" fill="#000000">
                         <path d="M253.6,0l-200,53.6L0,253.6L146.4,400l200-53.6l53.6-200L253.6,0z M330.4,330.4l-178.2,47.7L21.8,247.7L69.6,69.6
 	l178.2-47.7l130.4,130.4L330.4,330.4z M302.1,182.4c-6.4-4-16.5-5.9-30.5-5.9l-10.8,0.2c-2,0-3-0.5-3-1.5c0.1-1.1,0.6-2.8,1.3-5.1
 	l5.3-7.4c1.1-1.8,1.7-3.1,1.7-3.8c0-2.1-2.5-3.2-7.6-3.2c-5.1,0-8.1,0.8-8.9,2.5L235,177.7c-9.9,0.8-19.3,1.6-28.1,2.6
@@ -96,31 +92,28 @@
                 <div class="navbar-start"></div>
                 <div class="navbar-end">
                     <a class="navbar-item is-hidden">Home</a>
+                    <a class="navbar-item" href="#about">About Me</a>
                     <a class="navbar-item">My Work</a>
-                    <a class="navbar-item">About Me</a>
                     <a class="navbar-item" href="https://nmi.jacktowery.com">NMIX 5110</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section id="intro" class="hero is-white has-text-centered">
+    <section id="intro" class="hero is-transparent has-text-centered is-fullheight-with-navbar">
         <div class="hero-head"></div>
         <div class="hero-body">
             <div class="container">
                 <div class="columns is-centered">
                     <div class="column">
-                        <h1
-                            class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile is-family-secondary">
+                        <h1 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile is-family-secondary">
                             Graphic Designer &
                             Mobile/Web Developer</h1>
                         <h2 class="subtitle is-size-4-desktop">I design websites, apps, brands, graphics, and more.</h2>
                         <!--<img src="assets/logos/hex-black.svg" alt="logo" height="200px" width="200px">-->
                         <div class="r-spin-grow-1 load-hidden">
-                            <svg version="1.1" id="Layer1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
-                                style="enable-background:new 0 0 400 400;" xml:space="preserve" height="200px"
-                                width="200px" fill="#000000">
+                            <svg version="1.1" id="Layer1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
+                                style="enable-background:new 0 0 400 400;" xml:space="preserve" height="200px" width="200px" fill="#000000">
                                 <path d="M253.6,0l-200,53.6L0,253.6L146.4,400l200-53.6l53.6-200L253.6,0z M330.4,330.4l-178.2,47.7L21.8,247.7L69.6,69.6
 	l178.2-47.7l130.4,130.4L330.4,330.4z M302.1,182.4c-6.4-4-16.5-5.9-30.5-5.9l-10.8,0.2c-2,0-3-0.5-3-1.5c0.1-1.1,0.6-2.8,1.3-5.1
 	l5.3-7.4c1.1-1.8,1.7-3.1,1.7-3.8c0-2.1-2.5-3.2-7.6-3.2c-5.1,0-8.1,0.8-8.9,2.5L235,177.7c-9.9,0.8-19.3,1.6-28.1,2.6
@@ -145,6 +138,9 @@
 
             </div>
         </div>
+        <div class="hero-foot">
+            <p>[Footer design]</p>
+        </div>
     </section>
 
     <section id="about" class="section is-medium has-text-centered is-long is-primary">
@@ -154,48 +150,89 @@
                     <h1 class="title is-family-secondary is-spaced is-size-3-desktop is-size-4-mobile">Hey, I'm Jack.
                         Nice to meet you.</h1>
                     <h2 class="subtitle is-size-5-desktop">
-                        I started my first project in Inkscape over 7 years ago. Since then, I've worked hard to teach
-                        myself the concepts of graphic design, and I've discovered my passion to combine them with
-                        programming concepts I learned while earning my degree. I've had the opportunity to create
-                        content and branding for non-profit organizations and startups, and I'm always looking for
-                        something new to learn.
+                        I started my first project in Inkscape over 7 years ago. Since then, I've worked hard to teach myself the concepts of graphic design, and I've discovered my
+                        passion to combine them with programming concepts I learned while earning my degree. I've had the opportunity to create content and branding for non-profit
+                        organizations and startups, and I'm always looking for something new to learn.
                     </h2>
                 </div>
             </div>
-
         </div>
     </section>
 
     <section id="summary" class="section has-text-centered">
         <div class="container is-narrow">
-            <div class="box">
+            <div class="box box-no-padding">
                 <div class="content">
-                    <div class="columns is-centered">
-                        <div class="column">
-                            <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-1">Graphic
-                                Designer</h1>
-                            <p class="is-size-5">Lorem ipsum dolor sit amet</p>
-                            <p class="is-size-5">Lorem ipsum dolor sit amet</p>
-                            <p class="is-size-5">Lorem ipsum dolor sit amet</p>
-                            <p class="is-size-5">Lorem ipsum dolor sit amet</p>
+                    <div class="columns is-centered is-desktop">
+                        <div class="column is-column-has-border">
+                            <div class="has-padding-1">
+                                <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-1">Graphic Designer</h1>
+                                <p class="is-size-6">I believe in creating elegant, impactful designs and developing clean, consistent branding that conveys a clear message.</p>
+                                <br>
+                                <p class="has-text-primary is-bold">What I Design:</p>
+                                <p class="is-size-6">Logos, Branding, Apparel, UI/UX</p>
+                                <br>
+                                <p class="has-text-primary is-bold">My Toolkit:</p>
+                                <p class="is-size-6">Adobe Illustrator</p>
+                                <p class="is-size-6">Adobe Photoshop</p>
+                                <p class="is-size-6">Adobe InDesign</p>
+                                <p class="is-size-6">Adobe Lightroom</p>
+                                <p class="is-size-6">Adobe AfterEffects</p>
+                                <p class="is-size-6">Adobe Premiere Pro</p>
+                            </div>
+
+                        </div>
+                        <div class="column is-column-has-border">
+                            <div class="has-padding-1">
+                                <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-2">Mobile/Web Developer</h1>
+                                <p class="is-size-6">With a front-end focus, I enjoy designing and coding stunning websites & useful applications from the ground up.</p>
+                                <br>
+                                <p class="has-text-primary is-bold">Languages I Speak:</p>
+                                <p class="is-size-6">Java, Swift, HTML/CSS/SASS, JavaScript, PHP</p>
+                                <br>
+                                <p class="has-text-primary is-bold">My Toolkit:</p>
+                                <p class="is-size-6">Xcode</p>
+                                <p class="is-size-6">Android Studio</p>
+                                <p class="is-size-6">Visual Studio Code</p>
+                                <p class="is-size-6">Atom</p>
+                                <p class="is-size-6">GitHib & Bitbucket</p>
+                                <p class="is-size-6">Eclipse</p>
+                            </div>
+
                         </div>
                         <div class="column">
-                            <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-2">
-                                Web/Mobile Developer</h1>
-                            <p class="is-size-5">Lorem ipsum dolor sit amet</p>
-                            <p class="is-size-5">Lorem ipsum dolor sit amet</p>
-                            <p class="is-size-5">Lorem ipsum dolor sit amet</p>
-                            <p class="is-size-5">Lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div class="column">
-                            <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-3">Student
-                                Researcher</h1>
-                            <p class="is-size-5">Lorem ipsum dolor sit amet</p>
-                            <p class="is-size-5">Lorem ipsum dolor sit amet</p>
-                            <p class="is-size-5">Lorem ipsum dolor sit amet</p>
-                            <p class="is-size-5">Lorem ipsum dolor sit amet</p>
+                            <div class="has-padding-1">
+                                <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-3">Student Researcher</h1>
+                                <p class="is-size-6">I am naturally inquisitive, and my research experience has allowed to analyze data and solve real-world problems.</p>
+                                <br>
+                                <p class="has-text-primary is-bold">Where I've Researched:</p>
+                                <p class="is-size-6">Georgia Tech Research Institute - SEAL</p>
+                                <br>
+                                <p class="has-text-primary is-bold">My Toolkit:</p>
+                                <p class="is-size-6">MATLAB</p>
+                                <p class="is-size-6">R</p>
+                                <p class="is-size-6">Julia</p>
+                                <p class="is-size-6">Python</p>
+                                <p class="is-size-6">C++</p>
+                                <p class="is-size-6">LaTeX</p>
+                            </div>
+
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="" class="section is-medium has-text-centered is-long is-primary">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-three-fifths">
+                    <h1 class="title is-family-secondary is-spaced is-size-3-desktop is-size-4-mobile">New Section</h1>
+                    <h2 class="subtitle is-size-5-desktop">
+                        Ea ullamco labore id irure ut. Ex commodo est fugiat mollit dolor velit incididunt anim adipisicing dolor laboris ut. Fugiat velit irure dolor dolor eiusmod
+                        mollit ex esse fugiat consequat tempor ullamco. Consectetur laborum adipisicing non occaecat cillum id officia pariatur pariatur nulla.
+                    </h2>
                 </div>
             </div>
         </div>
