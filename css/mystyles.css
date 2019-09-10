@@ -21,6 +21,8 @@ $input-border-color: transparent;
 $input-shadow: none;
 */
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono:700");
+@import url("https://use.typekit.net/yuv5nvd.css");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:700,700i&display=swap");
 /*! bulma.io v0.7.4 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
@@ -325,7 +327,7 @@ code,
 pre {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  font-family: monospace; }
+  font-family: "Ubuntu Mono", monospace; }
 
 body {
   color: #4a4a4a;
@@ -860,7 +862,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   font-family: "Nunito", sans-serif !important; }
 
 .is-family-secondary {
-  font-family: "Noto Sans", "Nunito", sans-serif !important; }
+  font-family: proxima-nova, "Nunito", sans-serif !important; }
 
 .is-family-sans-serif {
   font-family: "Nunito", sans-serif !important; }
@@ -869,7 +871,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   font-family: monospace !important; }
 
 .is-family-code {
-  font-family: monospace !important; }
+  font-family: "Ubuntu Mono", monospace !important; }
 
 .is-block {
   display: block !important; }
@@ -6950,13 +6952,24 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
-.my-text-white, .my-text-white > *, .my-text-white > * > * {
+.my-text-white,
+.my-text-white > *,
+.my-text-white > * > * {
   color: #ffffff !important; }
 
 .section.is-primary {
   background-color: #019283;
   color: #fff; }
-  .section.is-primary h1, .section.is-primary h2, .section.is-primary h3, .section.is-primary h4, .section.is-primary h5, .section.is-primary h6, .section.is-primary p, .section.is-primary a, .section.is-primary strong, .section.is-primary em {
+  .section.is-primary h1,
+  .section.is-primary h2,
+  .section.is-primary h3,
+  .section.is-primary h4,
+  .section.is-primary h5,
+  .section.is-primary h6,
+  .section.is-primary p,
+  .section.is-primary a,
+  .section.is-primary strong,
+  .section.is-primary em {
     color: #fff; }
 
 strong {
@@ -6978,16 +6991,28 @@ a {
   letter-spacing: 0px; }
 
 .is-family-secondary {
-  letter-spacing: -1px; }
+  letter-spacing: 0px; }
 
 .subtitle {
   line-height: 1.4 !important; }
 
-.is-bold {
+.is-bold-500 {
+  font-weight: 500 !important; }
+
+.is-bold-600 {
   font-weight: 600 !important; }
 
-.is-bolder {
+.is-bold-700 {
   font-weight: 700 !important; }
+
+.has-extra-kerning {
+  letter-spacing: 3pt; }
+
+.is-uppercase {
+  text-transform: uppercase; }
+
+.is-lowercase {
+  text-transform: lowercase; }
 
 #summary {
   padding-top: 0px;

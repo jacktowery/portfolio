@@ -1,4 +1,4 @@
-(function () {
+(function() {
 
     let run = Pts.quickStart("#pt", "#494949");
     let pts;
