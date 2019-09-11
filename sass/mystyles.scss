@@ -147,6 +147,11 @@ a {
     text-transform: lowercase;
 }
 
+.has-shadows-1 {
+    -webkit-filter: drop-shadow(2px 2px 4px #0e1216);
+    filter: drop-shadow(2px 2px 4px #0e1216);
+}
+
 // SECTIONS
 
 #summary {
@@ -181,4 +186,29 @@ a {
 // SCROLL REVEAL
 html.sr .load-hidden {
     visibility: hidden;
+}
+
+// HEADER & ANIMATION
+#header {
+    position: relative;
+    height: calc(100vh + 10px);
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    overflow-x: hidden;
 }
