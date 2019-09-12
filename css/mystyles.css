@@ -333,7 +333,7 @@ body {
   color: #4a4a4a;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5; }
+  line-height: 1.8; }
 
 a {
   color: #019283;
@@ -6994,7 +6994,7 @@ a {
   letter-spacing: 0px; }
 
 .subtitle {
-  line-height: 1.4 !important; }
+  line-height: 1.8 !important; }
 
 .is-bold-500 {
   font-weight: 500 !important; }
@@ -7023,7 +7023,7 @@ a {
   margin-top: -45px; }
 
 .has-padding-1 {
-  margin: 30px !important; }
+  margin: 50px 30px !important; }
 
 .is-column-has-border {
   border-right: 0px solid #dfdfdf;
