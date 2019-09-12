@@ -22,6 +22,7 @@
         },
 
         animate: (time, ftime) => {
+
             for (i = 0; i < count; i++) {
                 pts[i].rotate2D(.0005, space.center);
                 form.fillOnly(colors[i % 1]).point(pts[i], 1, "circle");
