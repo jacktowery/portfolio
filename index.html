@@ -27,6 +27,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script type="text/javascript" src="js/pts.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script>
         //Reset at top of page
@@ -177,38 +178,42 @@
             <div class="box box-no-padding">
                 <div class="content">
                     <div class="columns is-centered is-desktop">
-                        <div class="column is-column-has-border">
-                            <div class="has-padding-1" id="flip-hide">
+                        <!--GRAPHIC DESIGNER-->
+                        <div class="column">
+                            <div class=" has-padding-1" id="">
                                 <div class="icon has-text-primary"><i class="fas fa-bezier-curve fa-3x"></i></div>
                                 <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-1 is-bold-700">Graphic Designer</h1>
-                                <div id="flip-hide-front" class="has-text-centered">
-                                    <p class="is-size-6">I believe in creating elegant, impactful designs and developing clean, consistent branding that conveys a clear message.
-                                    </p>
-                                    <br>
-                                    <p class="has-text-primary is-bold-700">What I Design:</p>
-                                    <p class="is-size-6">Logos, Branding, Apparel, UI/UX</p>
-                                    <br>
-                                    <p class="has-text-primary is-bold-700">My Design Toolkit:</p>
-                                    <p class="is-size-6">
-                                        Adobe Illustrator<br>
-                                        Adobe Photoshop<br>
-                                        Adobe InDesign<br>
-                                        Adobe Lightroom<br>
-                                        Paint.NET<br>
-                                        Inkscape<br>
-                                        Adobe AfterEffects<br>
-                                        Adobe Premiere Pro
-                                    </p>
-                                    <button class="button is-small is-primary" id="flip-button-1" onclick="flip1()">Details</button>
-                                </div>
-                                <div id="flip-hide-back" class="has-text-centered">
-                                    <p class="is-size-6">Details</p>
-                                    <button class="button is-small is-primary" id="flip-button-1" onclick="flip1()">Back</button>
-                                </div>
+                                <p class="is-size-6">I believe in creating elegant, impactful designs and developing clean, consistent branding that conveys a clear message.
+                                </p>
+                                <br>
+                                <p class="has-text-primary is-bold-700">What I Design:</p>
+                                <p class="is-size-6">Logos, Branding, Apparel, UI/UX</p>
+                                <br>
+                                <p class="has-text-primary is-bold-700">My Design Toolkit:</p>
+                                <p class="is-size-6">
+                                    Adobe Illustrator
+                                    <progress class="progress is-primary is-small" value="90" max="100">90%</progress>
+                                    Adobe Photoshop
+                                    <progress class="progress is-primary is-small" value="60" max="100">60%</progress>
+                                    Adobe InDesign
+                                    <progress class="progress is-primary is-small" value="65" max="100">65%</progress>
+                                    Adobe Lightroom
+                                    <progress class="progress is-primary is-small" value="80" max="100">80%</progress>
+                                    Paint.NET
+                                    <progress class="progress is-primary is-small" value="80" max="100">80%</progress>
+                                    Inkscape
+                                    <progress class="progress is-primary is-small" value="85" max="100">85%</progress>
+                                    Adobe AfterEffects
+                                    <progress class="progress is-primary is-small" value="55" max="100">55%</progress>
+                                    Adobe Premiere Pro
+                                    <progress class="progress is-primary is-small" value="50" max="100">50%</progress>
+                                </p>
+                                <button class="button">Details</button>
                             </div>
                         </div>
+                        <!--WEB/MOBILE DEVELOPER-->
                         <div class="column is-column-has-border">
-                            <div class="has-padding-1">
+                            <div class="has-padding-1" id="">
                                 <div class="icon has-text-primary"><i class="fas fa-code fa-3x"></i></div>
                                 <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-2 is-bold-700">Mobile/Web Developer</h1>
                                 <p class="is-size-6">With a front-end focus, I enjoy designing and coding stunning websites & useful applications from the ground up.</p>
@@ -227,14 +232,15 @@
                                     MySQL Workbench<br>
                                     FileZilla
                                 </p>
+                                <button class="button">Details</button>
                             </div>
-
                         </div>
+                        <!--STUDENT RESEARCHER-->
                         <div class="column">
-                            <div class="has-padding-1">
+                            <div class="has-padding-1" id="">
                                 <div class="icon has-text-primary"><i class="fas fa-search fa-3x"></i></div>
                                 <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-3 is-bold-700">Student Researcher</h1>
-                                <p class="is-size-6">I am naturally inquisitive, and my research experience has allowed to analyze data and solve real-world problems.</p>
+                                <p class="is-size-6">I am naturally inquisitive, and my research experience has allowed me to analyze data and solve real-world problems.</p>
                                 <br>
                                 <p class="has-text-primary is-bold-700">Where I've Researched:</p>
                                 <p class="is-size-6">Georgia Tech Research Institute - SEAL</p>
@@ -248,16 +254,13 @@
                                     C++<br>
                                     LaTeX
                                 </p>
+                                <button class="button">Details</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="button" id="flip-button-1" onclick="flip1()">FLIP 1</button>
-            <button class="button" id="flip-button-2" onclick="flip2()">FLIP 2</button>
-            <button class="button" id="flip-button-3" onclick="flip3()">FLIP 3</button>
         </div>
-
     </section>
 
     <section id="projects" class="section is-medium is-white has-text-centered">
@@ -269,7 +272,7 @@
 
     <section id="experience" class="section is-medium is-white has-text-centered">
         <h1 class="title is-family-secondary is-spaced is-size-3-desktop is-size-4-mobile is-bold-700">My Experience</h1>
-        <h2 class="subtitle is-size-5-desktop">My history of work and educational experience. <a href="#">Full Resume</a></h2>
+        <h2 class="subtitle is-size-5-desktop">My history of work and educational experience. <a href="#">Full CV</a></h2>
     </section>
 
 
@@ -290,7 +293,6 @@
     <script src="js/navbar.js"></script>
     <script src="js/scrollReveal.js"></script>
     <script src="js/canvas.js"></script>
-    <script src="js/flipToReveal.js"></script>
 </body>
 
 </html>
