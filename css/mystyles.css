@@ -7061,3 +7061,18 @@ html.sr .load-hidden {
 
 body {
   overflow-x: hidden; }
+
+#flip-hide {
+  position: relative !important; }
+
+#flip-hide-back,
+#flip-hide-front {
+  position: absolute !important;
+  width: 100%; }
+
+#flip-hide-back,
+#flip-hide-front {
+  transition: 0.4s; }
+
+#flip-hide-back {
+  opacity: 0.0; }

@@ -178,27 +178,34 @@
                 <div class="content">
                     <div class="columns is-centered is-desktop">
                         <div class="column is-column-has-border">
-                            <div class="has-padding-1">
+                            <div class="has-padding-1" id="flip-hide">
                                 <div class="icon has-text-primary"><i class="fas fa-bezier-curve fa-3x"></i></div>
                                 <h1 class="title is-size-4 is-spaced is-family-secondary load-hidden r-delayset-1 is-bold-700">Graphic Designer</h1>
-                                <p class="is-size-6">I believe in creating elegant, impactful designs and developing clean, consistent branding that conveys a clear message.</p>
-                                <br>
-                                <p class="has-text-primary is-bold-700">What I Design:</p>
-                                <p class="is-size-6">Logos, Branding, Apparel, UI/UX</p>
-                                <br>
-                                <p class="has-text-primary is-bold-700">My Design Toolkit:</p>
-                                <p class="is-size-6">
-                                    Adobe Illustrator<br>
-                                    Adobe Photoshop<br>
-                                    Adobe InDesign<br>
-                                    Adobe Lightroom<br>
-                                    Paint.NET<br>
-                                    Inkscape<br>
-                                    Adobe AfterEffects<br>
-                                    Adobe Premiere Pro
-                                </p>
+                                <div id="flip-hide-front" class="has-text-centered">
+                                    <p class="is-size-6">I believe in creating elegant, impactful designs and developing clean, consistent branding that conveys a clear message.
+                                    </p>
+                                    <br>
+                                    <p class="has-text-primary is-bold-700">What I Design:</p>
+                                    <p class="is-size-6">Logos, Branding, Apparel, UI/UX</p>
+                                    <br>
+                                    <p class="has-text-primary is-bold-700">My Design Toolkit:</p>
+                                    <p class="is-size-6">
+                                        Adobe Illustrator<br>
+                                        Adobe Photoshop<br>
+                                        Adobe InDesign<br>
+                                        Adobe Lightroom<br>
+                                        Paint.NET<br>
+                                        Inkscape<br>
+                                        Adobe AfterEffects<br>
+                                        Adobe Premiere Pro
+                                    </p>
+                                    <button class="button is-small is-primary" id="flip-button-1" onclick="flip1()">Details</button>
+                                </div>
+                                <div id="flip-hide-back" class="has-text-centered">
+                                    <p class="is-size-6">Details</p>
+                                    <button class="button is-small is-primary" id="flip-button-1" onclick="flip1()">Back</button>
+                                </div>
                             </div>
-
                         </div>
                         <div class="column is-column-has-border">
                             <div class="has-padding-1">
@@ -246,7 +253,11 @@
                     </div>
                 </div>
             </div>
+            <button class="button" id="flip-button-1" onclick="flip1()">FLIP 1</button>
+            <button class="button" id="flip-button-2" onclick="flip2()">FLIP 2</button>
+            <button class="button" id="flip-button-3" onclick="flip3()">FLIP 3</button>
         </div>
+
     </section>
 
     <section id="projects" class="section is-medium is-white has-text-centered">
@@ -279,6 +290,7 @@
     <script src="js/navbar.js"></script>
     <script src="js/scrollReveal.js"></script>
     <script src="js/canvas.js"></script>
+    <script src="js/flipToReveal.js"></script>
 </body>
 
 </html>
