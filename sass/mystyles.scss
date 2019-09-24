@@ -171,6 +171,10 @@ a {
     margin: 50px 30px !important;
 }
 
+.has-extra-space-bottom {
+    margin-bottom: 20px;
+}
+
 // COLUMN LAYOUTS
 .is-column-has-border {
     @media screen and (min-width: 1088px) {
@@ -227,4 +231,24 @@ body {
 // PROGRESS BARS
 progress {
     margin-bottom: 0 !important;
+}
+
+// FOOTER
+footer .social-buttons {
+    margin: 3em 0em;
+}
+
+footer .social-buttons a.button {
+    border-radius: 100%;
+    margin-left: .25em;
+    margin-right: .25em;
+}
+
+footer h1,
+.copyright {
+    color: #939599 !important;
+}
+
+.bulma img {
+    opacity: 0.5;
 }
