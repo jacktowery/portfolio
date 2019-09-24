@@ -31,6 +31,9 @@ $input-shadow: none;
 // Brand Colors
 $pink: #FC5B73;
 $aqua: #01b3a1;
+$one-med-blue: #282c34;
+$one-dark-blue: #21252B;
+$one-darkest-blue: #0e1216;
 
 // Brand Fonts
 // Import a Google Font
@@ -44,6 +47,7 @@ $aqua: #01b3a1;
 // Update Bulma's global variables
 $primary: $aqua;
 $link: $aqua;
+$dark: $one-med-blue;
 $family-sans-serif: 'Nunito',
 sans-serif;
 $family-primary: $family-sans-serif;
@@ -171,12 +175,15 @@ a {
 .is-column-has-border {
     @media screen and (min-width: 1088px) {
         border-right: 1px solid #dfdfdf;
+        border-left: 1px solid #dfdfdf;
         border-bottom: 0px solid #dfdfdf;
+        border-top: 0px solid #dfdfdf;
     }
 
     border-right: 0px solid #dfdfdf;
+    border-left: 0px solid #dfdfdf;
     border-bottom: 1px solid #dfdfdf;
-
+    border-top: 1px solid #dfdfdf;
 }
 
 .box-no-padding {
@@ -217,22 +224,7 @@ body {
     overflow-x: hidden;
 }
 
-// FLIP CARDS
-#flip-hide {
-    position: relative !important;
-}
-
-#flip-hide-back,
-#flip-hide-front {
-    position: absolute !important;
-    width: 100%;
-}
-
-#flip-hide-back,
-#flip-hide-front {
-    transition: 0.4s;
-}
-
-#flip-hide-back {
-    opacity: 0.0;
+// PROGRESS BARS
+progress {
+    margin-bottom: 0 !important;
 }
