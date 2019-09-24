@@ -228,10 +228,42 @@ body {
     overflow-x: hidden;
 }
 
-// PROGRESS BARS
+// SKILLS
 progress {
-    margin-bottom: 0 !important;
+    margin-bottom: 0.75em !important;
 }
+
+.progress-wrapper {
+    position: relative;
+    text-align: left !important;
+}
+
+.progress-value {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    //transform: translateX(-50%);
+    font-size: calc(1rem/1.5);
+    line-height: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+progress.is-small+.progress-value {
+    font-size: calc(0.75rem/1.5);
+    line-height: 0.75rem;
+}
+
+progress.is-medium+.progress-value {
+    font-size: calc(1.25rem/1.5);
+    line-height: 1.25rem;
+}
+
+progress.is-large+.progress-value {
+    font-size: calc(1.5rem/1.5);
+    line-height: 1.5rem;
+}
+
 
 // FOOTER
 footer .social-buttons {
