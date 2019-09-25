@@ -1,0 +1,9 @@
+// LOGOS
+
+.logo-rollover svg {
+    transition: 0.3s;
+}
+
+.logo-rollover:hover svg {
+    fill: $primary;
+}
