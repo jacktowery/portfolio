@@ -2,7 +2,11 @@
 
 // Brand Colors
 $pink: #FC5B73;
-$aqua: #01b3a1;
+$red: #E02C51;
+$blue: #20a2ff;
+$green: #46C48C;
+$aqua: #01D1BB;
+$aqua-o: #01B3A1;
 $one-light-gray: #91959B;
 $one-light-blue: #7F848E;
 $one-highlight-blue: #515A6B;
@@ -29,7 +33,7 @@ $grey-lighter: $one-light-blue;
 $grey-light: $one-light-gray;
 
 $primary: $aqua;
-$link: $aqua;
+$link: $primary;
 
 //FONTS
 $family-sans-serif: 'Nunito',
@@ -117,11 +121,6 @@ a {
 // ------------------------------------------------------
 
 // ETC CLASSES
-
-.has-shadows-1 {
-    -webkit-filter: drop-shadow(2px 2px 4px #0e1216);
-    filter: drop-shadow(2px 2px 4px #0e1216);
-}
 
 // scroll reveal
 html.sr .load-hidden {

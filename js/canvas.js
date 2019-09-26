@@ -11,7 +11,7 @@
     var timeOutId = -1;
 
     var pts = new Group();
-    var colors = ["#01b3a1"];
+    var colors = ["#7F848E"];
     var count = 300
     if (count < 300) count = 300;
 
@@ -31,7 +31,7 @@
             let t = space.pointer;
             pts.sort((a, b) => a.$subtract(t).magnitudeSq() - b.$subtract(t).magnitudeSq());
 
-            form.fillOnly("#01b3a133", 1);
+            form.fillOnly("#7F848E33", 1);
             pts.forEach((p, i) => form.point(p, 5 - 5 * i / pts.length, "circle"));
         },
 

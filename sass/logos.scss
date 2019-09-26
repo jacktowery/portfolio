@@ -1,9 +1,14 @@
 // LOGOS
 
 .logo-rollover svg {
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .logo-rollover:hover svg {
     fill: $primary;
+}
+
+.has-shadows-1 {
+    -webkit-filter: drop-shadow(2px 2px 4px #21252B);
+    filter: drop-shadow(2px 2px 4px #21252B);
 }
