@@ -7003,6 +7003,15 @@ a {
   padding-top: 0px;
   margin-top: -45px; }
 
+.hero {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
 progress {
   margin-bottom: 0.75em !important; }
 
@@ -7096,3 +7105,46 @@ footer .social-buttons a.button:hover {
 
 html.sr .load-hidden {
   visibility: hidden; }
+
+#timeline {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  padding: 100px; }
+
+.timeline-content {
+  text-align: right !important;
+  margin-left: 30px;
+  display: block; }
+
+.timeline-dot {
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  background-color: #282c34;
+  position: absolute;
+  display: block;
+  left: -0.315em;
+  top: 0.5em; }
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2em; }
+
+.timeline-item .timeline-content {
+  text-align: left !important; }
+
+.timeline-item {
+  left: 50%;
+  right: 0;
+  align-self: flex-start; }
+
+.timeline-item::before {
+  content: "";
+  background-color: #91959B;
+  display: block;
+  width: 0.1em;
+  height: 100%;
+  position: absolute;
+  top: 0; }

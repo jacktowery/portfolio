@@ -6,6 +6,17 @@
     margin-top: -45px; // move upwards into previous section
 }
 
+// Hero
+.hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
 // Skills
 progress {
     margin-bottom: 0.75em !important;
