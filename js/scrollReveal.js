@@ -25,6 +25,23 @@ ScrollReveal().reveal('.r-delayset-3', {
     origin: 'top'
 });
 
+ScrollReveal().reveal('.r-timeline-r', {
+    delay: 100,
+    duration: 200,
+    distance: '20px',
+    origin: 'top',
+    interval: 300,
+    easing: 'ease-in'
+});
+ScrollReveal().reveal('.r-timeline-l', {
+    delay: 300,
+    duration: 200,
+    distance: '20px',
+    origin: 'top',
+    interval: 300,
+    easing: 'ease-in'
+});
+
 var skills = [
     ["Adobe Illustrator", 90],
     ["Adobe Photoshop", 55],
