@@ -1,186 +1,195 @@
-Pts.namespace(window);
+let starCount = 600;
+let minStarSize = 1;
+let maxStarSize = 3;
+let starColor = "127,132,142";
+let alphaSpeed = 0.01;
+let alphaMin = 0.1;
+let alphaMax = 0.8;
 
-var space;
+var alphaVals = new Array();
+var colors = new Array();
+var alphaSpeeds = new Array();
 
-function dotSpace() {
-    space = new CanvasSpace("#pt");
-    space.setup({
-        bgcolor: "#222222"
-    });
-    var form = space.getForm();
-
-    // ELEMENTS
-    var points = [];
-    var center = space.size.$divide(1.8);
-    var angle = -(window.innerWidth * 0.5);
-    var count = window.innerWidth * 0.05;
-    if (count > 150) count = 150;
-    var mouse = center.clone();
-
-    points = Create.distributeRandom(space.innerBound, count);
-
-    var r = Math.min(space.size.x, space.size.y) * 1;
-    for (var i = 0; i < count; i++) {
-        var p = points[i];
-        //p.moveBy(center).rotate2D(i * Math.PI / count, center);
-        p.brightness = 0.1
-        points.push(p);
-    }
-
-    // CANVAS
-    space.add({
-        animate: function(time, fps, context) {
-
-            for (var i = 0; i < points.length; i++) {
-                // rotate the points slowly
-                var pt = points[i];
-
-                pt.rotate2D(Const.one_degree / 20, center);
-                form.stroke(false).fill("#ffffff").point(pt, 1);
-
-                // opacity of line derived from distance to the line
-                var distFromMouse = Math.abs(ln.getDistanceFromPoint(mouse))
-
-                if (distFromMouse < 50) {
-                    if (points[i].brightness < 0.3) points[i].brightness += 0.015
-                } else {
-                    if (points[i].brightness > 0.1) points[i].brightness -= 0.01
-                }
-
-                var color = "rgba(255,255,255," + points[i].brightness + ")"
-                form.stroke(color).fill(true).line(ln);
-            }
-        },
-
-        onMouseAction: function(type, x, y, evt) {
-            if (type == "move") {
-                mouse.set(x, y);
-            }
-        },
-
-        onTouchAction: function(type, x, y, evt) {
-            this.onMouseAction(type, x, y);
-        }
-    });
-
-    space.bindMouse();
-    space.play();
-
-}
-
-dotSpace();
-
-$(window).resize(function() {
-    space.removeAll();
-    $('canvas').remove();
-    dotSpace();
-});
-
-/*
 (function() {
 
-    let run = Pts.quickStart("#pt", "#222222");
-    let pts;
+    Pts.namespace(window);
+    var space = new CanvasSpace("#starfield").setup({
+        bgcolor: "#21252B",
+        resize: true,
+        retina: true
+    })
+    var form = space.getForm();
 
-    run((time, ftime) => {
-        if (!pts) pts = Create.distributeRandom(space.innerBound, 200);
+    var timeOutId = -1;
 
-        let t = space.pointer;
-        pts.sort((a, b) => a.$subtract(t).magnitudeSq() - b.$subtract(t).magnitudeSq());
+    var pts = new Group();
+    var sizes = new Array();
+    var count = starCount;
+    if (count < 300) count = 300;
 
-        form.fillOnly("#fff", 1);
-        pts.forEach((p, i) => form.point(p, 3 - 3 * i / pts.length, "circle"))
+    sizes = [];
+    alphaVals = [];
+    //colors = [];
 
-        form.fillOnly("#fff").points(pts, 1, "circle");
-    });
-
-    //// ----  
-
-    space.bindMouse().bindTouch().play();
-
-})();
-*/
-
-/*
-var space;
-
-function floatySpace() {
-    Pts.namespace(this);
-
-    var colors = [
-        "#FF3F8E", "#04C2C9", "#2E55C1"
-    ];
-
-
-    space = new CanvasSpace("canvas", "#252934").display();
-    var form = new Form(space);
-
-    // Elements
-    var pts = [];
-    var center = space.size.$divide(1.8);
-    var angle = -(window.innerWidth * 0.5);
-    var count = window.innerWidth * 0.05;
-    if (count > 150) count = 150;
-    var line = new Line(0, angle).to(space.size.x, 0);
-    var mouse = center.clone();
-
-    var r = Math.min(space.size.x, space.size.y) * 1;
-    for (var i = 0; i < count; i++) {
-        var p = new Vector(Math.random() * r - Math.random() * r, Math.random() * r - Math.random() * r);
-        p.moveBy(center).rotate2D(i * Math.PI / count, center);
-        p.brightness = 0.1
-        pts.push(p);
+    for (i = 0; i < count; i++) {
+        let starSize = Math.random() * (maxStarSize - minStarSize);
+        sizes[i] = starSize;
+        alphaVals[i] = Math.random() * (alphaMax - alphaMin);
+        alphaSpeeds[i] = alphaSpeed;
     }
 
-    // Canvas
     space.add({
-        animate: function(time, fps, context) {
+        start: (bound) => {
+            pts = Create.distributeRandom(space.innerBound, count);
+            console.log("space.add.start:");
+        },
 
-            for (var i = 0; i < pts.length; i++) {
-                // rotate the points slowly
-                var pt = pts[i];
+        animate: (time, ftime) => {
 
-                pt.rotate2D(Const.one_degree / 20, center);
-                form.stroke(false).fill(colors[i % 3]).point(pt, 1);
-
-                // get line from pt to the mouse line
-                var ln = new Line(pt).to(line.getPerpendicularFromPoint(pt));
-
-                // opacity of line derived from distance to the line
-                var opacity = Math.min(0.8, 1 - Math.abs(line.getDistanceFromPoint(pt)) / r);
-                var distFromMouse = Math.abs(ln.getDistanceFromPoint(mouse))
-
-                if (distFromMouse < 50) {
-                    if (pts[i].brightness < 0.3) pts[i].brightness += 0.015
-                } else {
-                    if (pts[i].brightness > 0.1) pts[i].brightness -= 0.01
+            for (i = 0; i < count; i++) {
+                if (alphaVals[i] >= alphaMax) {
+                    //alphaVals[i] = 1;
+                    alphaSpeeds[i] *= -1;
+                    // console.log("alpha > 1");
                 }
-
-                var color = "rgba(255,255,255," + pts[i].brightness + ")"
-                form.stroke(color).fill(true).line(ln);
+                if (alphaVals[i] <= alphaMin) {
+                    //alphaVals[i] = 0;
+                    alphaSpeeds[i] *= -1;
+                    //console.log("alpha < 1");
+                }
+                alphaVals[i] += alphaSpeeds[i];
+                //form.alpha(alphaVals[i]);
+                form.fillOnly("#7f848e").point(pts[i], sizes[i], "circle").alpha(alphaVals[i]);
+                //console.log(alphaVals[0]);
             }
+
+
+
+            //let t = space.pointer;
+            //pts.sort((a, b) => a.$subtract(t).magnitudeSq() - b.$subtract(t).magnitudeSq());
+
+            //form.fillOnly("#7F848E33", 1);
+            //pts.forEach((p, i) => form.point(p, 5 - 5 * i / pts.length, "circle"));
         },
 
-        onMouseAction: function(type, x, y, evt) {
-            if (type == "move") {
-                mouse.set(x, y);
-            }
-        },
-
-        onTouchAction: function(type, x, y, evt) {
-            this.onMouseAction(type, x, y);
+        resize: () => {
+            clearTimeout(timeOutId);
+            setTimeout(() => {
+                //pts = Create.distributeRandom(space.innerBound, count);
+                console.log("space.add.resize:setTimeout()");
+            }, 500)
         }
-    });
 
-    space.bindMouse();
+    })
+
     space.play();
+})();
+
+/*
+var starCount = 600;
+var maxStarRadius = 5;
+
+function Starfield(args) {
+    // Canvas properties
+    this.canvas = document.querySelector('#starfield');
+    this.context = this.canvas.getContext('2d');
+    this.throttle = 100;
+    this.windowWidth = window.innerWidth;
+
+    // Star properties
+    this.starCount = starCount;
+    this.stars = [];
+
+    // Initialize starfield
+    this.initialize = function() {
+        this.setupCanvas();
+        this.setupDrawArea();
+        this.generateStars();
+    }
+
+    // Setup canvas
+    this.setupCanvas = function() {
+        this.canvasWidth = canvas.offsetWidth;
+        this.canvasHeight = canvas.offsetHeight;
+    }
+
+    // Setup draw area
+    this.setupDrawArea = function() {
+        // cluster stars at top of canvas
+        this.densityArea = {
+            x: 0,
+            y: 0,
+            width: this.width,
+            height: this.height
+        };
+    }
+
+    this.generateStars = function() {
+        for (var i = 0; i < this.starCount; i++) {
+            var star = new Star({
+                context: this.context,
+                areaWidth: this.width,
+                areaHeight: this.height,
+            });
+            this.stars.push(star);
+        }
+    }
+
+    this.render = function() {
+        this.context.clearRect(0, 0, this.width, this.height);
+        for (var i = 0; i < this.stars.length; i++) {
+            var star = this.stars[i];
+            star.draw();
+        }
+    }
+
+    this.resizeCanvas = function() {
+        this.setupCanvas();
+        // don't render if too small
+        if (this.windowWidth > 100) {
+            this.stars = [];
+            this.setupDrawArea();
+            this.generateStars();
+        }
+    }
 }
 
-floatySpace();
+function Star(args) {
+    this.context = args.context;
+    this.areaWidth = args.areaWidth;
+    this.areaHeight = args.areaHeight;
 
-$(window).resize(function() {
-    space.removeAll();
-    $('canvas').remove();
-    floatySpace();
-});
-*/
+    this.position = {
+        x: Math.random() * this.areaWidth,
+        y: Math.random() * this.areaHeight
+    };
+    this.speed = {
+        x: Math.random() * 0.002,
+        y: Math.random() * 0.002
+    };
+
+    this.radius = Math.ceil(Math.random() * maxStarRadius);
+    this.alpha = Math.random() * 0.5 + 0.5;
+    this.alphaSpeed = Math.random() * 0.03;
+    this.color = "255,255,255";
+    this.colorAlpha = "rgba(" + this.color + "," + this.alpha + ")";
+
+    this.draw = function() {
+        this.updateAlpha();
+        this.context.beginPath();
+        this.context.fillStyle = this.color();
+        this.context.arc(this.position)
+    }
+
+}
+
+var starfield = new Starfield();
+
+window.addEventListener("resize", function() {
+    starfield.resizeCanvas();
+}, false);
+
+function animate() {
+    requestAnimationFrame(animate);
+    starfield.render();
+}*/
