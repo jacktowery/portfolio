@@ -1,9 +1,12 @@
 let starCount = 300;
 let minStarSize = 0.5;
 let maxStarSize = 3;
-let alphaSpeed = 0.006;
-let alphaMin = 0.01;
-let alphaMax = 0.6;
+let alphaSpeed = 0.005;
+let alphaMin = 0.05;
+let alphaMax = 0.5;
+
+let starColor = "#91959B";
+let backgroundColor = "#21252B";
 
 var alphaVals = new Array();
 var colors = new Array();
@@ -13,7 +16,7 @@ var alphaSpeeds = new Array();
 
     Pts.namespace(window);
     var space = new CanvasSpace("#pt").setup({
-        bgcolor: "#21252B",
+        bgcolor: backgroundColor,
         resize: true,
         retina: true
     })
@@ -54,7 +57,7 @@ var alphaSpeeds = new Array();
         animate: (time, ftime) => {
 
             for (i = 0; i < count; i++) {
-                form.fillOnly("#ffffff").point(pts[i], sizes[i], "circle").alpha(alphaVals[i]);
+                form.fillOnly(starColor).point(pts[i], sizes[i], "circle").alpha(alphaVals[i]);
                 if (alphaVals[i] >= alphaMax || alphaVals[i] <= alphaMin) {
                     alphaSpeeds[i] *= -1;
                 }
@@ -66,7 +69,7 @@ var alphaSpeeds = new Array();
             clearTimeout(timeOutId);
             setTimeout(() => {
                 pts = Create.distributeRandom(space.innerBound, count);
-            }, 1)
+            }, 500)
         }
 
     })
