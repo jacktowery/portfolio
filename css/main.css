@@ -7545,8 +7545,12 @@ progress.is-large + .progress-value {
 .box {
   overflow: hidden; }
 
+#projects2 {
+  padding-top: 2em;
+  padding-bottom: 2em; }
+
 .project-grid figure {
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative; }
 
@@ -7603,3 +7607,6 @@ progress.is-large + .progress-value {
   margin: 0 !important;
   font-weight: 700;
   text-transform: uppercase; }
+
+.navbar-item img {
+  max-height: 4rem !important; }
