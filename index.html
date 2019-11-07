@@ -66,7 +66,7 @@
         <div id="pt" class="canvas"></div>
         <div id="headerContent" class="flex">
             <div class="container is-centered has-text-centered">
-                <span class="logo-rollover load-hidden r-spin-grow-1 ">
+                <div class="logo-rollover load-hidden r-spin-grow-1 ">
                     <svg version="1.1" id="corner-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
                         style="enable-background:new 0 0 400 400;" xml:space="preserve" height="100px" width="100px" fill="#ffffff" class="has-shadows-1">
                         <path d="M253.6,0l-200,53.6L0,253.6L146.4,400l200-53.6l53.6-200L253.6,0z M330.4,330.4l-178.2,47.7L21.8,247.7L69.6,69.6
@@ -87,7 +87,7 @@
         c0-4.2,2.5-8.4,7.6-12.4c5.1-4,9.3-6,12.5-6c1.4,0,2.3,0.3,2.8,0.8c2,2.4,3,4.3,3,5.8c0,1.5-0.4,2.8-1.3,3.8
         c-0.8,1.1-1.9,2.3-3.1,3.6c-1.2,1.3-3.6,3.2-7.2,5.5c-3.6,2.3-7.1,3.5-10.5,3.5C234.1,121.7,232.9,120.1,232.9,117.4z" />
                     </svg>
-                </span>
+                </div>
                 <h2 class="is-spaced is-family-secondary is-bold-600 is-uppercase is-size-4-desktop has-text-primary has-extra-kerning">
                     Hello, World!</h2>
                 <h1 class="title is-size-1-desktop is-size-2-touch is-family-secondary is-bold-700 has-text-white">I'm
@@ -149,8 +149,8 @@
                                 <p class="is-size-6">Logos, Branding, Apparel, UI/UX</p>
                                 <br>
                                 <p class="has-text-primary is-bold-700">My Design Experience:</p>
-                                <div class="progress-group">
-                                    <div class="progress-wrapper" id="first-bar">
+                                <div class="progress-group" id="bars-1">
+                                    <div class="progress-wrapper">
                                         <progress class="progress is-primary is-medium" value="0" max="100">90%</progress>
                                         <p class="progress-value">Adobe Illustrator</p>
                                     </div>
@@ -199,7 +199,7 @@
                                 <p class="is-size-6">Visual Studio Code, Atom, Terminal, GitHub</p>
                                 <br>
                                 <p class="has-text-primary is-bold-700">My Developement Experience:</p>
-                                <div class="progress-group">
+                                <div class="progress-group" id="bars-2">
                                     <div class="progress-wrapper">
                                         <progress class="progress is-primary is-medium" value="0" max="100">45%</progress>
                                         <p class="progress-value">Swift (Xcode)</p>
@@ -250,7 +250,7 @@
                                 <p class="is-size-6">Georgia Tech Research Institute - SEAL</p>
                                 <br>
                                 <p class="has-text-primary is-bold-700">My Research Experience:</p>
-                                <div class="progress-group">
+                                <div class="progress-group" id="bars-3">
                                     <div class="progress-wrapper">
                                         <progress class="progress is-primary is-medium" value="0" max="100">75%</progress>
                                         <p class="progress-value">MATLAB</p>
@@ -313,9 +313,12 @@
                                         <div class="content">
                                             <p class="project-title is-family-secondary is-size-3-desktop is-size-4-mobile">
                                                 VENT</p>
-                                            <p class="project-subtitle is-size-5-desktop is-size-6-mobile">Find Events Near You
+                                            <p class="project-subtitle is-size-5-desktop is-size-6-mobile">Find Events Near You</p>
+                                            <p class="project-icons">
+                                                <i class="fas fa-globe-americas"></i>
+                                                <i class="fas fa-mobile-alt"></i>
+                                                <i class="fas fa-desktop"></i>
                                             </p>
-                                            <p class="project-date is-family-secondary">October 12-23, 2019</p>
                                         </div>
                                     </div>
                                 </figure>
@@ -329,9 +332,11 @@
                                         <div class="content">
                                             <p class="project-title is-family-secondary is-size-3-desktop is-size-4-mobile">
                                                 FinalPod</p>
-                                            <p class="project-subtitle is-size-5-desktop is-size-6-mobile">A Podcast App
+                                            <p class="project-subtitle is-size-5-desktop is-size-6-mobile">A Podcast App</p>
+                                            <p class="project-icons">
+                                                <i class="fab fa-apple"></i>
+                                                <i class="fas fa-mobile-alt"></i>
                                             </p>
-                                            <p class="project-date is-family-secondary">December 5, 2018</p>
                                         </div>
                                     </div>
                                 </figure>
@@ -345,9 +350,11 @@
                                         <div class="content">
                                             <p class="project-title is-family-secondary is-size-3-desktop is-size-4-mobile">
                                                 Song Preview Utility</p>
-                                            <p class="project-subtitle is-size-5-desktop is-size-6-mobile">An iOS App
+                                            <p class="project-subtitle is-size-5-desktop is-size-6-mobile">An iOS App</p>
+                                            <p class="project-icons">
+                                                <i class="fab fa-apple"></i>
+                                                <i class="fas fa-mobile-alt"></i>
                                             </p>
-                                            <p class="project-date is-family-secondary">November 15, 2018</p>
                                         </div>
                                     </div>
                                 </figure>

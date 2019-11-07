@@ -7,6 +7,9 @@ $blue: #20a2ff;
 $green: #46C48C;
 $aqua: #01D1BB;
 $aqua-o: #01B3A1;
+$purple: #8065b6;
+$purple2: #7141d1;
+$purple3: #8c5fe7;
 $one-light-gray: #91959B;
 $one-light-blue: #7F848E;
 $one-highlight-blue: #515A6B;
@@ -32,7 +35,7 @@ $grey: $one-highlight-blue;
 $grey-lighter: $one-light-blue;
 $grey-light: $one-light-gray;
 
-$primary: $aqua;
+$primary: $purple3;
 $link: $primary;
 //$link-visited: $primary;
 
@@ -250,7 +253,7 @@ progress.is-large+.progress-value {
 
 .project-grid .overlay {
     position: absolute;
-    background-color: #21252B;
+    background-color: $one-med-blue;
     opacity: 0;
     transition: 0.4s ease;
     top: 0;
@@ -263,7 +266,6 @@ progress.is-large+.progress-value {
 
 .project-grid .overlay:hover {
     opacity: 1;
-    background-color: #21252BCC;
 }
 
 .project-grid figure {
@@ -285,6 +287,12 @@ progress.is-large+.progress-value {
     height: 100%;
 }
 
+.project-grid .project-icons {
+    line-height: 1 !important;
+    margin: 1em 0 0 0 !important;
+    color: $primary;
+}
+
 .project-grid .project-title {
     color: #ffffff;
     font-weight: 700;
@@ -293,13 +301,14 @@ progress.is-large+.progress-value {
 }
 
 .project-grid .project-subtitle {
-    color: #ffffff;
+    color: $one-light-gray;
     font-weight: 600;
     margin: 0 !important;
+    line-height: 1 !important;
 }
 
 .project-grid .project-date {
-    color: $one-light-blue;
+    color: $one-light-gray;
     margin: 0 !important;
     font-weight: 700;
     text-transform: uppercase;
