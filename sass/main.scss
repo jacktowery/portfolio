@@ -110,7 +110,19 @@ a {
 }
 
 .subtitle {
-    line-height: 1.8 !important;
+    @media screen and (min-width: 1088px) {
+        line-height: 1.8 !important;
+    }
+
+    line-height: 1.6 !important;
+}
+
+body {
+    @media screen and (min-width: 1088px) {
+        line-height: 1.8 !important;
+    }
+
+    line-height: 1.3 !important;
 }
 
 //* ------------------------------------------------------
@@ -222,6 +234,11 @@ footer .social-buttons a.button:hover {
     border-color: #fff !important;
 }
 
+footer .title {
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+}
+
 .bulma img {
     opacity: 0.5;
 }
@@ -243,12 +260,66 @@ footer .social-buttons a.button:hover {
     filter: drop-shadow(2px 2px 4px #21252B);
 }
 
+.logo-color-scroll {
+    fill: linear-gradient(307deg, #e75f5f, #e79c5f, #e7de5f, #7ee75f, #5fcee7);
+
+    -webkit-animation: AboutGradient 30s ease infinite;
+    -moz-animation: AboutGradient 30s ease infinite;
+    animation: AboutGradient 30s ease infinite;
+
+    @-webkit-keyframes AboutGradient {
+        0% {
+            background-position: 0% 5%
+        }
+
+        50% {
+            background-position: 100% 96%
+        }
+
+        100% {
+            background-position: 0% 5%
+        }
+    }
+
+    @-moz-keyframes AboutGradient {
+        0% {
+            background-position: 0% 5%
+        }
+
+        50% {
+            background-position: 100% 96%
+        }
+
+        100% {
+            background-position: 0% 5%
+        }
+    }
+
+    @keyframes AboutGradient {
+        0% {
+            background-position: 0% 5%
+        }
+
+        50% {
+            background-position: 100% 96%
+        }
+
+        100% {
+            background-position: 0% 5%
+        }
+    }
+}
+
 //* ------------------------------------------------------
 //* TIMELINE
 //* ------------------------------------------------------
 
 .timeline .timeline-item {
     padding-bottom: 0.5em;
+}
+
+.timeline-content .heading {
+    margin-bottom: 0;
 }
 
 #about {
@@ -259,11 +330,15 @@ footer .social-buttons a.button:hover {
 //* SECTIONS
 //* ------------------------------------------------------
 
-// ! SUMMARY
-#summary {
-    padding-top: 0px;
-    margin-top: -45px; // move upwards into previous section
+// ! ABOUT
+#about {
+    @media screen and (min-width: 1088px) {
+        padding: 4em 1.5em 8em 1.5em;
+    }
+
+    padding: 2em 1.5em 4em 1.5em;
 }
+
 
 // ! HERO
 .hero {
@@ -277,6 +352,18 @@ footer .social-buttons a.button:hover {
 }
 
 // ! SKILLS
+#skills {
+    padding-top: 0;
+}
+
+#skills .container {
+    @media screen and (min-width: 1088px) {
+        margin-top: -4em;
+    }
+
+    margin-top: -3em;
+}
+
 progress {
     margin-bottom: 0.75em !important;
 }

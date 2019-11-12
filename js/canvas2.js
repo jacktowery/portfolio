@@ -26,6 +26,7 @@ var alphaSpeeds = new Array();
 
     var pts = new Group();
     var sizes = new Array();
+    var resize = 0;
     var count = starCount;
     if (count < 300) count = 300;
 
@@ -55,7 +56,6 @@ var alphaSpeeds = new Array();
         },
 
         animate: (time, ftime) => {
-
             for (i = 0; i < count; i++) {
                 form.fillOnly(starColor).point(pts[i], sizes[i], "circle").alpha(alphaVals[i]);
                 if (alphaVals[i] >= alphaMax || alphaVals[i] <= alphaMin) {
@@ -66,11 +66,19 @@ var alphaSpeeds = new Array();
         },
 
         resize: () => {
+            if (resize > 1) {
+                clearTimeout(timeOutId);
+                setTimeout(() => {
+                    pts = Create.distributeRandom(space.innerBound, count);
+                }, 500)
+            }
+            resize++;
+            /*
             clearTimeout(timeOutId);
-            pts = Create.distributeRandom(space.innerBound, count);
             setTimeout(() => {
                 pts = Create.distributeRandom(space.innerBound, count);
             }, 500)
+            */
         }
 
     })
