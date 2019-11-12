@@ -24,9 +24,9 @@ $one-darkest-blue: #0e1216;
 @import url("https://use.typekit.net/yuv5nvd.css");
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:700,700i&display=swap');
 
-// Update Bulma's global variables
+// ! Update Bulma's global variables
 
-// COLORS
+// ! COLORS
 //  initial variables
 $black: $one-dark-blue;
 $grey-darker: $one-med-blue;
@@ -39,7 +39,7 @@ $primary: $purple3;
 $link: $primary;
 //$link-visited: $primary;
 
-//FONTS
+// ! FONTS
 $family-sans-serif: 'Nunito',
 sans-serif;
 $family-primary: $family-sans-serif;
@@ -49,7 +49,7 @@ sans-serif;
 $family-code: 'Ubuntu Mono',
 monospace;
 
-// SPACING
+// ! SPACING
 $body-line-height: 1.8;
 
 $box-radius: 20px;
@@ -61,11 +61,11 @@ $footer-padding: 0;
 
 $progress-bar-background-color: #d5dde2;
 
-// ------------------------------------------------------
+//* ------------------------------------------------------
 // Import only what you need from Bulma
 @import "../node_modules/bulma/bulma.sass";
 @import '../node_modules/bulma-timeline/dist/css/bulma-timeline.sass'; // Bulma timeline extension
-// ------------------------------------------------------
+//* ------------------------------------------------------
 
 // Overwrite some rules for customization
 .my-text-white,
@@ -100,7 +100,7 @@ a {
     transition: 0.3s;
 }
 
-// FONT SPACING & KERNING
+// ! FONT SPACING & KERNING
 .is-family-primary {
     letter-spacing: 0px;
 }
@@ -113,28 +113,139 @@ a {
     line-height: 1.8 !important;
 }
 
-// ------------------------------------------------------
-
-// Import other classes
-@import "./logos.scss"; // Styles for all logos
-@import "./text.scss"; // Classes for general text
-@import "./spacing.scss"; // Classes for general spacing
-@import "./sections.scss"; // Styles for other sections
-@import "./header.scss"; // Styles for header
-@import "./footer.scss"; // Styles for footer
-
-// ------------------------------------------------------
-
-// ETC CLASSES
+//* ------------------------------------------------------
+//* ETC.
+//* ------------------------------------------------------
 
 // scroll reveal
 html.sr .load-hidden {
     visibility: hidden;
 }
 
-// ------------------------------------------------------
-// TIMELINE
-// ------------------------------------------------------
+//* ------------------------------------------------------
+//* SPACING
+//* ------------------------------------------------------
+
+.has-padding-1 {
+    margin: 50px 30px !important;
+}
+
+.has-extra-space-bottom {
+    margin-bottom: 20px;
+}
+
+//* ------------------------------------------------------
+//* TEXT
+//* ------------------------------------------------------
+
+.is-bold-500 {
+    font-weight: 500 !important;
+}
+
+.is-bold-600 {
+    font-weight: 600 !important;
+}
+
+.is-bold-700 {
+    font-weight: 700 !important;
+}
+
+.has-extra-kerning {
+    letter-spacing: 3pt;
+}
+
+.is-uppercase {
+    text-transform: uppercase;
+}
+
+.is-lowercase {
+    text-transform: lowercase;
+}
+
+//* ------------------------------------------------------
+//* HEADER
+//* ------------------------------------------------------
+
+#header {
+    position: relative;
+    height: calc(100vh + 10px);
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.arrow-spin-on-hover {
+    div {
+        transform: rotate(0deg);
+        transition: transform 0.3s;
+    }
+}
+
+.arrow-spin-on-hover:hover {
+    div {
+        transform: rotate(90deg);
+    }
+}
+
+//* ------------------------------------------------------
+//* FOOTER
+//* ------------------------------------------------------
+
+footer .social-buttons {
+    margin: 3em 0em;
+}
+
+footer .social-buttons a.button {
+    border-radius: 100%;
+    margin-left: .25em;
+    margin-right: .25em;
+    border-color: $primary !important;
+}
+
+footer .social-buttons a.button:hover {
+    border-color: #fff !important;
+}
+
+.bulma img {
+    opacity: 0.5;
+}
+
+//* ------------------------------------------------------
+//* LOGOS
+//* ------------------------------------------------------
+
+.logo-rollover svg {
+    transition: 0.2s;
+}
+
+.logo-rollover:hover svg {
+    fill: $primary;
+}
+
+.has-shadows-1 {
+    -webkit-filter: drop-shadow(2px 2px 4px #21252B);
+    filter: drop-shadow(2px 2px 4px #21252B);
+}
+
+//* ------------------------------------------------------
+//* TIMELINE
+//* ------------------------------------------------------
 
 .timeline .timeline-item {
     padding-bottom: 0.5em;
@@ -144,17 +255,17 @@ html.sr .load-hidden {
     transition: hue 60s infinite ease;
 }
 
-// ------------------------------------------------------
-// SECTIONS
-// ------------------------------------------------------
+//* ------------------------------------------------------
+//* SECTIONS
+//* ------------------------------------------------------
 
-// Summary
+// ! SUMMARY
 #summary {
     padding-top: 0px;
     margin-top: -45px; // move upwards into previous section
 }
 
-// Hero
+// ! HERO
 .hero {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -165,7 +276,7 @@ html.sr .load-hidden {
     justify-content: space-between;
 }
 
-// Skills
+// ! SKILLS
 progress {
     margin-bottom: 0.75em !important;
 }
@@ -204,7 +315,7 @@ progress.is-large+.progress-value {
     line-height: 1.5rem;
 }
 
-// Box-Column Sections
+// ! BOX-COLUMN SECTIONS
 .is-column-has-border {
     @media screen and (min-width: 1088px) {
         border-right: 1px solid #dfdfdf;
@@ -231,7 +342,7 @@ progress.is-large+.progress-value {
     overflow: hidden;
 }
 
-// Projects
+// ! PROJECTS
 #projects2 {
     padding-top: 2em;
     padding-bottom: 2em;
@@ -314,7 +425,7 @@ progress.is-large+.progress-value {
     text-transform: uppercase;
 }
 
-// NAVBAR
+// ! NAVBAR
 
 .navbar-item img {
     max-height: 4rem !important;

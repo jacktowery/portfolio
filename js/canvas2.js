@@ -67,6 +67,7 @@ var alphaSpeeds = new Array();
 
         resize: () => {
             clearTimeout(timeOutId);
+            pts = Create.distributeRandom(space.innerBound, count);
             setTimeout(() => {
                 pts = Create.distributeRandom(space.innerBound, count);
             }, 500)
