@@ -37,7 +37,11 @@ $grey-light: $one-light-gray;
 
 $primary: $purple3;
 $link: $primary;
-//$link-visited: $primary;
+
+// tabs and stuff
+$border: #dfdfdf;
+$tabs-link-color: $grey-light;
+$tabs-border-bottom-color: #ffffff;
 
 // ! FONTS
 $family-sans-serif: 'Nunito',
@@ -144,6 +148,10 @@ html.sr .load-hidden {
 
 .has-extra-space-bottom {
     margin-bottom: 20px;
+}
+
+.no-margins {
+    margin: 0 !important;
 }
 
 //* ------------------------------------------------------
@@ -429,12 +437,28 @@ progress.is-large+.progress-value {
     overflow: hidden;
 }
 
-// ! PROJECTS
+// ! PROJECTS PAGE
+// Header
+#header2 {
+    margin: 0em 2em 1em 2em;
+}
+
+.tabs a {
+    border-bottom-color: #ffffff;
+}
+
+// Main container
 #projects2 {
     padding-top: 2em;
     padding-bottom: 2em;
 }
 
+// Animations
+.column {
+    transition: ease-in-out 0.5s width;
+}
+
+// Grid
 .project-grid figure {
     //border: 1px solid #7F848E;
     border-radius: 10px;
@@ -510,6 +534,72 @@ progress.is-large+.progress-value {
     margin: 0 !important;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+// Modal
+#projects2 .box {
+    box-shadow: none !important;
+    padding: 2em;
+}
+
+#projects2 .modal-content,
+#projects2 .modal-card {
+    @media screen and (min-width: 769px) {
+        width: 900px;
+    }
+}
+
+#projects2 .box img {
+    max-height: 300px;
+    border-radius: 10px;
+    margin: 0 1em 1em 0;
+}
+
+.project-modal .modal-project-title {
+    color: $one-med-blue;
+    font-weight: 700;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+}
+
+.project-modal .modal-project-subtitle {
+    color: $one-highlight-blue;
+    font-weight: 600;
+    margin: 0 !important;
+    line-height: 1 !important;
+}
+
+.project-modal .modal-project-date {
+    color: $one-light-gray;
+    margin: 0 !important;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.project-modal .modal-project-desc p {
+    line-height: 1.3;
+}
+
+.project-modal .modal-project-section p {
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+}
+
+.project-modal .modal-project-section p .button {
+    margin-top: 0.5em;
+}
+
+.project-modal .modal-project-tags {
+    line-height: 1.8;
+}
+
+.clear-all {
+    clear: both;
+}
+
+span.tag:hover {
+    background-color: $primary !important;
+    color: #ffffff !important;
 }
 
 // ! NAVBAR
