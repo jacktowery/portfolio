@@ -18,11 +18,12 @@ var projVue = new Vue({
                     'https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=4973694f042693f6b4d59c2e1340604e&user_id=185908815@N02&format=json&nojsoncallback=1'
                 );
                 this.allPhotos = response.data.photos.photo;
+                this.allPhotos.reverse();
                 for (i = 0; i < this.allPhotos.length; i++) {
                     // Get photo URL
                     let photoURL = "https://farm" + this.allPhotos[i].farm + ".staticflickr.com/" + this.allPhotos[i].server + "/" + this.allPhotos[i].id + "_" + this
                         .allPhotos[i].secret +
-                        "_b.jpg";
+                        "_z.jpg";
                     this.allPhotoUrls.push(photoURL);
 
                     // Get share photo URL
