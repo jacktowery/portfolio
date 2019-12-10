@@ -27,10 +27,29 @@
         {
             "id": "proj-0002",
             "category": "code",
+            "title": "The Industry - Branding",
+            "subtitleShort": "Logos & Branding Guide",
+            "subtitleLong": "Logos, Font Usage Guidelines, and Branding Reference Guide",
+            "date": "December 2018",
+            "description": "Branding elements for The Industry - Entertainment Media Studies Club at the University of Georgia. Branding package includes new logos, a commercially licensed font with typeface guidelines, and a short branding reference guide for implementing the brand across different platforms.",
+            "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/0b0c8d89269439.5defb37383326.png",
+            "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/834df789269439.5defb373827e5.png",
+            "platforms": [
+                "<i class=\"fas fa-bezier-curve\"></i> &nbsp; Graphic Design",
+                "<i class=\"fas fa-swatchbook\"></i> &nbsp; Branding"
+            ],
+            "tools": [
+                "Adobe Illustrator"
+            ],
+            "url": "https://www.behance.net/gallery/89269439/The-Industry-at-UGA-Branding"
+        },
+        {
+            "id": "proj-0003",
+            "category": "code",
             "title": "FinalPod",
             "subtitleShort": "A Podcast App",
             "subtitleLong": "A Podcast App - Final project for NMIX 4310 Rich Media Production",
-            "date": "December 5, 2018",
+            "date": "December 2018",
             "description": "My final project for NMIX 4310: Rich Media Production involved making an iOS app that allows users to search for and play full episodes of podcasts on their device. Using the iTunes API in a similar way to my Jukebox project, users enter search terms into the box to find podcasts. The iTunes API returns data of results related to the search terms including the title of the podcast, the hosts, the cover art, and the URL to the RSS feed containing details about the episodes of each podcast. The resulting podcasts are arranged in a Tableview that the user can scroll through and select a podcast.",
             "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/a8cdea86149495.5d9215f600a6a.png",
             "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/a8cdea86149495.5d9215f600a6a.png",
@@ -46,12 +65,12 @@
             "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App"
         },
         {
-            "id": "proj-0003",
+            "id": "proj-0004",
             "category": "code",
             "title": "Song Preview Utility",
             "subtitleShort": "An iOS App",
             "subtitleLong": "An iOS App - Jukebox project for NMIX 4310 Rich Media Production",
-            "date": "November 15, 2018",
+            "date": "November 2018",
             "description": "This assignment for NMIX 4310: Rich Media Production involved making an iOS app that allows users to play music on their device. I decided to take the extra step of integrating the iTunes API into my application, so that users can search for songs in the iTunes database and play previews of songs they search for. When the user enters search terms into the box, they are encoded into a URL that can query the iTunes API and download data of results related to the search terms. This data includes song title, artist, album, duration, album art, and the audio file for the song preview. Some of this data is arranged into a Tableview that the user can scroll through and select a song.",
             "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/28ec4f86202997.5d9287c09a818.png",
             "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/28ec4f86202997.5d9287c09a818.png",
@@ -67,12 +86,12 @@
             "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App"
         },
         {
-            "id": "proj-0004",
+            "id": "proj-0005",
             "category": "code",
             "title": "Wallpaper Designer",
             "subtitleShort": "An iOS App",
             "subtitleLong": "An iOS App - Midterm project for NMIX 4310 Rich Media Production",
-            "date": "October 30, 2018",
+            "date": "October 2018",
             "description": "This third project for my NMIX 4310: Rich Media Production Midterm involved making an iOS app that allows users to design a wallpaper by changing the color and pattern of vector images on the main view. By pressing the customize button, users are presented with a menu (in a Tableview) where they can select \"Color Settings\" or \"Pattern Settings\". In Color Settings, the user can tap on the squares representing the background color and the pattern color, and adjust the RGB sliders to change the colors. As the user moves the sliders, the color of the selected square updates in real-time. The values of the RGB sliders are saved throughout the duration of the app so that the user can tweak the chosen color. When the user taps \"Confirm\", the colors are applied to the pattern on the main view.",
             "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/db3f1386211407.5d92db12309c1.png",
             "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/db3f1386211407.5d92db12309c1.png",
@@ -87,7 +106,7 @@
             "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App"
         },
         {
-            "id": "proj-0005",
+            "id": "proj-0006",
             "category": "design",
             "title": "YMCA Camp Northwest Logo",
             "subtitleShort": "New Logo for 2018",
@@ -106,7 +125,7 @@
             "url": "https://www.behance.net/gallery/89235791/UGA-Miracle-2017-Rebrand"
         },
         {
-            "id": "proj-0006",
+            "id": "proj-0007",
             "category": "design",
             "title": "UGA® Miracle Rebranding",
             "subtitleShort": "2017 Rebranding Project",
@@ -127,7 +146,7 @@
             "url": "https://www.behance.net/gallery/89235791/UGA-Miracle-2017-Rebrand"
         },
         {
-            "id": "proj-0007",
+            "id": "proj-0008",
             "category": "design",
             "title": "YMCA Play Center Logos",
             "subtitleShort": "For the Northwest Family YMCA",
