@@ -223,6 +223,19 @@ body {
     }
 }
 
+.arrow-right-on-hover {
+    div {
+        transform: translate(0, 0);
+        transition: transform 0.3s;
+    }
+}
+
+.arrow-right-on-hover:hover {
+    div {
+        transform: translate(5px, 0);
+    }
+}
+
 //* ------------------------------------------------------
 //* FOOTER
 //* ------------------------------------------------------
