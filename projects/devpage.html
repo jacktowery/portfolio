@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Font Awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- pts.js (animation) -->
+    <script type="text/javascript" src="../js/pts.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="columns" id="projects2-columns">
+        <div class="column is-one-third">
+
+            <!-- PROJECT TEMPLATE -->
+            <div class="project">
+                <a :onclick="launchModal(projectID)">
+                    <figure class="image is-4by3">
+                        <img :src="projectImgTile">
+                        <div class="content">
+                            <p class="project-title is-family-secondary is-size-3-desktop is-size-4-mobile">{{ projectTitle }}</p>
+                            <p class="project-subtitle is-size-5-desktop is-size-6-mobile">{{ projectSubtitleShort }}</p>
+                            <!--Icons-->
+                        </div>
+                    </figure>
+                </a>
+
+                <div class="modal">
+                    <div class="modal-background" :onclick="closeModal(projectID)"></div>
+                    <div class="modal-content">
+                        <div class="box project-modal">
+                            <img class="is-pulled-left" :src="projectImgModal">
+                            <p class="modal-project-title is-family-secondary is-size-3-desktop is-size-4-mobile">{{ projectTitle }}</p>
+                            <p class="modal-project-subtitle is-size-5-desktop is-size-6-mobile">{{ projectSubitleLong }}</p>
+
+                            <div class="modal-project-section modal-project-desc has-text-left has-text-grey-lighter">
+                                <p>{{ projectDesc }}</p>
+                            </div>
+
+                            <div class="modal-project-section has-text-left clear-all">
+                                <p class="modal-project-tags">
+                                    <span class="is-bold-700 is-family-secondary has-text-grey-light">Platforms:</span>
+                                    <span class="tag is-primary is-light is-rounded">{{ platform[i] }}</span>
+                                    <span class="tag is-primary is-light is-rounded">{{ platform[i] }}</span>
+                                </p>
+                            </div>
+
+                            <div class="modal-project-section has-text-left clear-all">
+                                <p class="modal-project-tags">
+                                    <span class="is-bold-700 is-family-secondary has-text-grey-light">Tools Used:</span>
+                                    <span class="tag is-light is-rounded">{{ tool[i] }}</span>
+                                </p>
+                            </div>
+
+                            <div class="modal-project-section clear-all">
+                                <p>
+                                    <a :href="projectLink" target="_blank" class="button is-primary">View Project</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

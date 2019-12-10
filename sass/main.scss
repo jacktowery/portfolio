@@ -473,7 +473,7 @@ progress.is-large+.progress-value {
     position: absolute;
 }
 
-.project-grid .overlay {
+.overlay {
     position: absolute;
     background-color: $one-med-blue;
     opacity: 0;
@@ -486,7 +486,7 @@ progress.is-large+.progress-value {
     width: 100%;
 }
 
-.project-grid .overlay:hover {
+.overlay:hover {
     opacity: 1;
 }
 
@@ -523,7 +523,7 @@ progress.is-large+.progress-value {
 }
 
 .project-grid .project-subtitle {
-    color: $one-light-gray;
+    color: $primary;
     font-weight: 600;
     margin: 0 !important;
     line-height: 1 !important;
@@ -549,6 +549,8 @@ progress.is-large+.progress-value {
     }
 }
 
+// Grid
+
 #projects2 .box img {
     max-height: 300px;
     border-radius: 10px;
@@ -558,8 +560,8 @@ progress.is-large+.progress-value {
 .project-modal .modal-project-title {
     color: $one-med-blue;
     font-weight: 700;
-    margin: 0 !important;
-    line-height: 1.4 !important;
+    margin: 0 0 0.3em 0 !important;
+    line-height: 1 !important;
 }
 
 .project-modal .modal-project-subtitle {
@@ -593,6 +595,10 @@ progress.is-large+.progress-value {
     line-height: 1.8;
 }
 
+.project-modal .modal-project-tags .tag {
+    margin-right: 0.5em;
+}
+
 .clear-all {
     clear: both;
 }
@@ -601,6 +607,51 @@ span.tag:hover {
     background-color: $primary !important;
     color: #ffffff !important;
 }
+
+// ! PHOTOS
+#photography-columns figure {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+}
+
+#photography-columns figure img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+}
+
+.photo-overlay {
+    position: absolute;
+    background-color: #282c3499;
+    opacity: 0;
+    transition: 0.4s ease;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.photo-overlay:hover {
+    opacity: 1;
+}
+
+#photography-columns .photo-overlay .content {
+    position: relative;
+    height: 100%;
+}
+
+#photography-columns .photo-capture-date {
+    position: absolute;
+    padding: 0 0 0.2em 0.6em;
+    bottom: 0;
+}
+
 
 // ! NAVBAR
 

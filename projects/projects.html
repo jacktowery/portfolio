@@ -31,6 +31,8 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <!-- Vue.js -->
@@ -108,7 +110,7 @@ c-0.8,1.1-1.9,2.3-3.1,3.6c-1.2,1.3-3.6,3.2-7.2,5.5c-3.6,2.3-7.1,3.5-10.5,3.5C234
                         <div class="buttons">
                             <a href="/" class="button is-primary is-outlined">About</a>
                             <a class="button is-primary">Projects</a>
-                            <a class="button is-primary is-outlined">[?]</a>
+                            <a class="button is-primary is-outlined">Photography</a>
                         </div>
                     </div>
                 </div>
@@ -122,14 +124,14 @@ c-0.8,1.1-1.9,2.3-3.1,3.6c-1.2,1.3-3.6,3.2-7.2,5.5c-3.6,2.3-7.1,3.5-10.5,3.5C234
 
         <div class="tabs is-centered">
             <ul>
-                <li class="is-active is-bold-600">
-                    <a id="tab-all" onclick="">All Projects</a>
+                <li id="tab-all" class="is-active is-bold-600">
+                    <a onclick="filterAll()">All Projects</a>
                 </li>
-                <li class="is-bold-600">
-                    <a id="tab-design" onclick="">Web/Mobile Design</a>
+                <li id="tab-code" class="is-bold-600">
+                    <a onclick="filterCode()">Web/Mobile Design</a>
                 </li>
-                <li class="is-bold-600">
-                    <a id="tab-graphic" onclick="">Graphic Design</a>
+                <li id="tab-design" class="is-bold-600">
+                    <a onclick="filterDesign()">Graphic Design</a>
                 </li>
             </ul>
         </div>
@@ -139,9 +141,61 @@ c-0.8,1.1-1.9,2.3-3.1,3.6c-1.2,1.3-3.6,3.2-7.2,5.5c-3.6,2.3-7.1,3.5-10.5,3.5C234
         <div class="content has-text-centered">
             <div class="container has-text-centered">
                 <div class="project-grid">
-                    <div class="columns is-multiline is-centered">
+                    <div class="columns is-multiline is-centered" id="projects2-columns">
+                        <div v-for="project in filteredProjects" :id="project.id" class="project column is-one-third">
+                            <a onclick="launchModal(this)">
+                                <figure class="image is-4by3">
+                                    <img :src="project.imageTile">
+                                    <div class="overlay">
+                                        <div class="content">
+                                            <p class="project-title is-family-secondary is-size-3-desktop is-size-4-mobile">{{ project.title }}</p>
+                                            <p class="project-subtitle is-size-5-desktop is-size-6-mobile">{{ project.subtitleShort }}</p>
+                                            <p class="project-date is-size-6-desktop is-size-7-mobile">{{ project.date }}</p>
+                                            <!--Icons-->
+                                        </div>
+                                    </div>
+                                </figure>
+                            </a>
 
-                        <div id="testC" class="column is-one-third">
+                            <div class="modal">
+                                <div class="modal-background" onclick="closeModal(this)"></div>
+                                <div class="modal-content">
+                                    <div class="box project-modal">
+                                        <img class="is-pulled-left" :src="project.imageModal">
+                                        <p class="modal-project-title is-family-secondary is-size-3-desktop is-size-4-mobile">{{ project.title }}</p>
+                                        <p class="modal-project-subtitle is-size-5-desktop is-size-6-mobile">{{ project.subtitleLong }}</p>
+
+                                        <div class="modal-project-section modal-project-desc has-text-left has-text-grey-lighter">
+                                            <p>{{ project.description }}</p>
+                                        </div>
+
+                                        <div class="modal-project-section has-text-left clear-all">
+                                            <p class="modal-project-tags">
+                                                <span class="is-bold-700 is-family-secondary has-text-grey-light" v-if="project.category == 'code'">Platforms:</span>
+                                                <span class="is-bold-700 is-family-secondary has-text-grey-light" v-if="project.category == 'design'">Creative Fields:</span>
+                                                <span v-for="platform in project.platforms" class="tag is-primary is-light is-rounded" v-html="platform"></span>
+                                            </p>
+                                        </div>
+
+                                        <div class="modal-project-section has-text-left clear-all">
+                                            <p class="modal-project-tags">
+                                                <span class="is-bold-700 is-family-secondary has-text-grey-light">Tools Used:</span>
+                                                <span v-for="tool in project.tools" class="tag is-light is-rounded">{{ tool }}</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="modal-project-section clear-all">
+                                            <p>
+                                                <a :href="project.url" target="_blank" class="button is-primary">View Full Project</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="modal-close is-large" aria-label="close" onclick="closeModal(this)"></button>
+                            </div>
+                        </div>
+
+                        <!--<div id="testC" class="column is-one-third">
                             <a onclick='launchModal("testC")'>
                                 <figure class="image is-4by3">
                                     <img class="" src="../assets/project_covers/VENT_mockup2_awards.png" alt="VENT: Find Events Near You">
@@ -212,11 +266,11 @@ c-0.8,1.1-1.9,2.3-3.1,3.6c-1.2,1.3-3.6,3.2-7.2,5.5c-3.6,2.3-7.1,3.5-10.5,3.5C234
                                 </div>
                                 <button class="modal-close is-large" aria-label="close" onclick="closeModal('testC')"></button>
                             </div>
-                        </div>
-
+                        </div>-->
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 

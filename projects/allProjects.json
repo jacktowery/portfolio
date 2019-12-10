@@ -1,0 +1,151 @@
+{
+    "projects": [{
+            "id": "proj-0001",
+            "category": "code",
+            "title": "VENT",
+            "subtitleShort": "Find Events Near You",
+            "subtitleLong": "Search for concerts, sorting events, and more near you using your GPS location!",
+            "date": "October 12-13, 2019",
+            "description": "VENT searches for concerts, sporting events, and more using your GPS location and the radius you specified to search. If you see an event you're interested in, swipe right to save it, or swipe left if you're not interested. Tap the mail icon, and VENT will email you the list of events you are interested in. It's that simple! \n\nVENT was created in just 24 hours for HackNC 2019, a Hackathon at UNC Chapel Hill ",
+            "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/9dfb2387459281.5db8d460c0738.png",
+            "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/40140d87459281.5db8d460c0eff.png",
+            "platforms": [
+                "<i class=\"fas fa-globe-americas\"></i> &nbsp; Web App",
+                "<i class=\"fas fa-desktop\"></i>&nbsp; / &nbsp;<i class=\"fas fa-mobile-alt\"></i>&nbsp;Responsive"
+            ],
+            "tools": [
+                "HTML5",
+                "SASS",
+                "JavaScript",
+                "Node.js",
+                "Bulma",
+                "anime.js",
+                "Adobe Illustrator"
+            ],
+            "url": "https://vent.jacktowery.com"
+        },
+        {
+            "id": "proj-0002",
+            "category": "code",
+            "title": "FinalPod",
+            "subtitleShort": "A Podcast App",
+            "subtitleLong": "A Podcast App - Final project for NMIX 4310 Rich Media Production",
+            "date": "December 5, 2018",
+            "description": "My final project for NMIX 4310: Rich Media Production involved making an iOS app that allows users to search for and play full episodes of podcasts on their device. Using the iTunes API in a similar way to my Jukebox project, users enter search terms into the box to find podcasts. The iTunes API returns data of results related to the search terms including the title of the podcast, the hosts, the cover art, and the URL to the RSS feed containing details about the episodes of each podcast. The resulting podcasts are arranged in a Tableview that the user can scroll through and select a podcast.",
+            "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/a8cdea86149495.5d9215f600a6a.png",
+            "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/a8cdea86149495.5d9215f600a6a.png",
+            "platforms": [
+                "<i class=\"fab fa-apple\"></i> &nbsp; iOS App"
+            ],
+            "tools": [
+                "Swift",
+                "Xcode",
+                "Adobe Illustrator",
+                "iTunes API"
+            ],
+            "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App"
+        },
+        {
+            "id": "proj-0003",
+            "category": "code",
+            "title": "Song Preview Utility",
+            "subtitleShort": "An iOS App",
+            "subtitleLong": "An iOS App - Jukebox project for NMIX 4310 Rich Media Production",
+            "date": "November 15, 2018",
+            "description": "This assignment for NMIX 4310: Rich Media Production involved making an iOS app that allows users to play music on their device. I decided to take the extra step of integrating the iTunes API into my application, so that users can search for songs in the iTunes database and play previews of songs they search for. When the user enters search terms into the box, they are encoded into a URL that can query the iTunes API and download data of results related to the search terms. This data includes song title, artist, album, duration, album art, and the audio file for the song preview. Some of this data is arranged into a Tableview that the user can scroll through and select a song.",
+            "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/28ec4f86202997.5d9287c09a818.png",
+            "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/28ec4f86202997.5d9287c09a818.png",
+            "platforms": [
+                "<i class=\"fab fa-apple\"></i> &nbsp; iOS App"
+            ],
+            "tools": [
+                "Swift",
+                "Xcode",
+                "Adobe Illustrator",
+                "iTunes API"
+            ],
+            "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App"
+        },
+        {
+            "id": "proj-0004",
+            "category": "code",
+            "title": "Wallpaper Designer",
+            "subtitleShort": "An iOS App",
+            "subtitleLong": "An iOS App - Midterm project for NMIX 4310 Rich Media Production",
+            "date": "October 30, 2018",
+            "description": "This third project for my NMIX 4310: Rich Media Production Midterm involved making an iOS app that allows users to design a wallpaper by changing the color and pattern of vector images on the main view. By pressing the customize button, users are presented with a menu (in a Tableview) where they can select \"Color Settings\" or \"Pattern Settings\". In Color Settings, the user can tap on the squares representing the background color and the pattern color, and adjust the RGB sliders to change the colors. As the user moves the sliders, the color of the selected square updates in real-time. The values of the RGB sliders are saved throughout the duration of the app so that the user can tweak the chosen color. When the user taps \"Confirm\", the colors are applied to the pattern on the main view.",
+            "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/db3f1386211407.5d92db12309c1.png",
+            "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/db3f1386211407.5d92db12309c1.png",
+            "platforms": [
+                "<i class=\"fab fa-apple\"></i> &nbsp; iOS App"
+            ],
+            "tools": [
+                "Swift",
+                "Xcode",
+                "Adobe Illustrator"
+            ],
+            "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App"
+        },
+        {
+            "id": "proj-0005",
+            "category": "design",
+            "title": "YMCA Camp Northwest Logo",
+            "subtitleShort": "New Logo for 2018",
+            "subtitleLong": "New Logo and Weekly Theme Buttons",
+            "date": "May 2018",
+            "description": "This logo and other assets were created for Camp Northwest at the Northwest Family YMCA. The project required strict adherence to YMCA of the USA's national brand guidelines, including fonts and illustration style.",
+            "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/f508e989236189.5deebd0bcb160.png",
+            "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/f508e989236189.5deebd0bcb160.png",
+            "platforms": [
+                "<i class=\"fas fa-bezier-curve\"></i> &nbsp; Graphic Design",
+                "<i class=\"fas fa-swatchbook\"></i> &nbsp; Branding"
+            ],
+            "tools": [
+                "Adobe Illustrator"
+            ],
+            "url": "https://www.behance.net/gallery/89235791/UGA-Miracle-2017-Rebrand"
+        },
+        {
+            "id": "proj-0006",
+            "category": "design",
+            "title": "UGA® Miracle Rebranding",
+            "subtitleShort": "2017 Rebranding Project",
+            "subtitleLong": "Revised Logos, New Fonts, and Branding Style Guide",
+            "date": "August 2017",
+            "description": "This project is Step 1 in a larger effort to reorganize and re-brand the non-profit student organization UGA® Miracle. I have revised the logo for the organization and created a new branding style guide with use guidelines for logos, fonts, colors, graphics, flyers, and apparel. Step 2 will involve an overhaul of the website in 2018.",
+            "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/74582589235791.5deebbae3b677.png",
+            "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6f75db89235791.5deebbae3bca7.png",
+            "platforms": [
+                "<i class=\"fas fa-bezier-curve\"></i> &nbsp; Graphic Design",
+                "<i class=\"fas fa-swatchbook\"></i> &nbsp; Branding"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Lightoom",
+                "Adobe AfterEffects"
+            ],
+            "url": "https://www.behance.net/gallery/89235791/UGA-Miracle-2017-Rebrand"
+        },
+        {
+            "id": "proj-0007",
+            "category": "design",
+            "title": "YMCA Play Center Logos",
+            "subtitleShort": "For the Northwest Family YMCA",
+            "subtitleLong": "For the Northwest Family YMCA",
+            "date": "July 2017",
+            "description": "This is a set of logos created for the three areas of the Play Center at the Northwest Family YMCA, the Zone (childcare for ages 5 - 12), the Clubhouse (childcare for ages 6 mo - 5 years), and the Climbing Wall (the indoor rock wall).",
+            "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/c403a189235435.5deeb95021eb2.png",
+            "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/a4602889235435.5deeb95021175.png",
+            "platforms": [
+                "<i class=\"fas fa-bezier-curve\"></i> &nbsp; Graphic Design",
+                "<i class=\"fas fa-swatchbook\"></i> &nbsp; Branding"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Lightroom"
+            ],
+            "url": "https://www.behance.net/gallery/89235435/YMCA-Play-Center-Logos"
+        }
+    ]
+
+}
