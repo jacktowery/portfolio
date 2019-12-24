@@ -83,13 +83,13 @@ var skills1 = [
 
 var skills2 = [
     ["Swift (Xcode)", 45],
-    ["Java (Android)", 55],
+    ["Java (Android)", 60],
     ["HTML", 90],
     ["CSS/SASS", 85],
-    ["JavaScript", 65],
-    ["PHP", 35],
-    ["MySQL", 40],
-    ["Vue.js", 15]
+    ["JavaScript", 75],
+    ["PHP", 30],
+    ["MySQL", 35],
+    ["Vue.js", 40]
 ]
 
 var skills3 = [
@@ -126,7 +126,7 @@ function fillProgress(set) {
     }
 }
 
-ScrollReveal().reveal('#bars-1', {
+ScrollReveal().reveal('#bars-1-fake', {
     delay: 400,
     duration: 1,
     afterReveal: function(el) {
@@ -134,7 +134,7 @@ ScrollReveal().reveal('#bars-1', {
     }
 });
 
-ScrollReveal().reveal('#bars-2', {
+ScrollReveal().reveal('#bars-2-fake', {
     delay: 400,
     duration: 1,
     afterReveal: function(el) {
@@ -142,7 +142,7 @@ ScrollReveal().reveal('#bars-2', {
     }
 });
 
-ScrollReveal().reveal('#bars-3', {
+ScrollReveal().reveal('#bars-3-fake', {
     delay: 400,
     duration: 1,
     afterReveal: function(el) {
