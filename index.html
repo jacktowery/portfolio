@@ -24,11 +24,20 @@
     <link rel="apple-touch-icon" href="assets/icons/favicon-152.png" sizes="152x152">
     <link rel="apple-touch-icon" href="assets/icons/favicon-180.png" sizes="180x180">
 
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script type="text/javascript" src="js/pts.min.js"></script>
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--Font Awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- pts.js (header animation) -->
+    <script type="text/javascript" src="js/pts.min.js"></script>
+    <!-- anime.js (other animation) -->
+    <!--<script src="anime.min.js"></script>-->
+    <!-- Scroll Reveal (scroll triggered animations) -->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- Vue.js -->
     <script>
         //Reset at top of page
         //ScrollReveal({ reset: true });
@@ -66,7 +75,7 @@
         <div id="pt" class="canvas"></div>
         <div id="headerContent" class="flex">
             <div class="container is-centered has-text-centered">
-                <div class="load-hidden r-spin-grow-1 ">
+                <div class="load-hidden r-spin-grow-1">
                     <svg version="1.1" id="corner-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400"
                         style="enable-background:new 0 0 400 400;" xml:space="preserve" height="100px" width="100px" fill="#ffffff" class="has-shadows-1">
                         <path d="M253.6,0l-200,53.6L0,253.6L146.4,400l200-53.6l53.6-200L253.6,0z M330.4,330.4l-178.2,47.7L21.8,247.7L69.6,69.6
@@ -98,9 +107,9 @@
                     Me &nbsp;
                     <div><i class="fas fa-caret-right"></i></div>
                 </a>
-                <a href="https://nmi.jacktowery.com" class="button is-medium is-outlined is-primary is-lowercase is-bold-700 arrow-right-on-hover">NMI Portfolio &nbsp;
+                <!--<a href="https://nmi.jacktowery.com" class="button is-medium is-outlined is-primary is-lowercase is-bold-700 arrow-right-on-hover">NMI Portfolio &nbsp;
                     <div><i class="fas fa-caret-right"></i></div>
-                </a>
+                </a>-->
                 <br>
                 <!--<a href="http://nmi.jacktowery.com" class="">NMIX 5110</a>-->
             </div>
@@ -502,9 +511,8 @@
         </section>
     </footer>
 
-    <script src="js/scrollReveal.js"></script>
-    <script src="js/canvas2.js"></script>
-    <script src="js/hover.js"></script>
+    <script src="js/headerAnimatedBG.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 
 </html>

@@ -671,3 +671,17 @@ span.tag:hover {
 .navbar-item img {
     max-height: 4rem !important;
 }
+
+//* ------------------------------------------------------
+//* ANIMATION HELPERS
+//* ------------------------------------------------------
+
+.animate-loadTransparent {
+    opacity: 0;
+}
+
+// Animation: 'typed' text. class = "animate-typedText"
+.animate-typedText .letter {
+    display: inline-block;
+    line-height: 1em;
+}
