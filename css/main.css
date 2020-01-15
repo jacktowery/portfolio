@@ -7629,19 +7629,8 @@ html.sr .load-hidden {
 body {
   overflow-x: hidden; }
 
-.arrow-spin-on-hover div {
-  transform: rotate(0deg);
-  transition: transform 0.3s; }
-
-.arrow-spin-on-hover:hover div {
-  transform: rotate(90deg); }
-
-.arrow-right-on-hover div {
-  transform: translate(0, 0);
-  transition: transform 0.3s; }
-
-.arrow-right-on-hover:hover div {
-  transform: translate(5px, 0); }
+#header .button {
+  margin: 0 0.5em 0 0.5em; }
 
 footer .social-buttons {
   margin: 3em 0em; }
@@ -7965,3 +7954,17 @@ span.tag:hover {
 .animate-typedText .letter {
   display: inline-block;
   line-height: 1em; }
+
+.arrow-spin-on-hover div {
+  transform: rotate(0deg);
+  transition: transform 0.3s; }
+
+.arrow-spin-on-hover:hover div {
+  transform: rotate(90deg); }
+
+.arrow-right-on-hover div {
+  transform: translate(0, 0);
+  transition: transform 0.3s; }
+
+.arrow-right-on-hover:hover div {
+  transform: translate(5px, 0); }

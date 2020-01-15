@@ -2,7 +2,7 @@
 let starCount = 300;
 let minStarSize = 0.5;
 let maxStarSize = 3;
-let alphaSpeed = 0.005;
+let alphaSpeed = 0.007;
 let alphaMin = 0.05;
 let alphaMax = 0.5;
 
@@ -34,7 +34,7 @@ var alphaSpeeds = new Array();
     sizes = [];
     alphaVals = [];
 
-    for (i = 0; i < count; i++) {
+    for (i = 0; i < count + 1; i++) {
         let starSize = Math.random() * maxStarSize;
         if (starSize < alphaMin) {
             starSize = alphaMin;
