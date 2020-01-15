@@ -61,7 +61,7 @@ var projVue = new Vue({
     methods: {
         async loadAllProjects() {
             try {
-                let response = await axios.get('allProjects.json');
+                let response = await axios.get('/allProjects.json');
                 this.allProjects = response.data.projects;
                 if (this.filter == 'none') {
                     this.filteredProjects = this.allProjects;

@@ -22,7 +22,8 @@
                 "anime.js",
                 "Adobe Illustrator"
             ],
-            "url": "https://vent.jacktowery.com"
+            "url": "https://vent.jacktowery.com",
+            "fav": "true"
         },
         {
             "id": "proj-0002",
@@ -41,7 +42,8 @@
             "tools": [
                 "Adobe Illustrator"
             ],
-            "url": "https://www.behance.net/gallery/89269439/The-Industry-at-UGA-Branding"
+            "url": "https://www.behance.net/gallery/89269439/The-Industry-at-UGA-Branding",
+            "fav": "true"
         },
         {
             "id": "proj-0003",
@@ -62,7 +64,8 @@
                 "Adobe Illustrator",
                 "iTunes API"
             ],
-            "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App"
+            "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App",
+            "fav": "true"
         },
         {
             "id": "proj-0004",
@@ -83,7 +86,8 @@
                 "Adobe Illustrator",
                 "iTunes API"
             ],
-            "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App"
+            "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App",
+            "fav": "false"
         },
         {
             "id": "proj-0005",
@@ -103,7 +107,8 @@
                 "Xcode",
                 "Adobe Illustrator"
             ],
-            "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App"
+            "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App",
+            "fav": "false"
         },
         {
             "id": "proj-0006",
@@ -122,7 +127,8 @@
             "tools": [
                 "Adobe Illustrator"
             ],
-            "url": "https://www.behance.net/gallery/89235791/UGA-Miracle-2017-Rebrand"
+            "url": "https://www.behance.net/gallery/89235791/UGA-Miracle-2017-Rebrand",
+            "fav": "false"
         },
         {
             "id": "proj-0007",
@@ -143,7 +149,8 @@
                 "Adobe Lightoom",
                 "Adobe AfterEffects"
             ],
-            "url": "https://www.behance.net/gallery/89235791/UGA-Miracle-2017-Rebrand"
+            "url": "https://www.behance.net/gallery/89235791/UGA-Miracle-2017-Rebrand",
+            "fav": "false"
         },
         {
             "id": "proj-0008",
@@ -163,7 +170,8 @@
                 "Adobe Illustrator",
                 "Adobe Lightroom"
             ],
-            "url": "https://www.behance.net/gallery/89235435/YMCA-Play-Center-Logos"
+            "url": "https://www.behance.net/gallery/89235435/YMCA-Play-Center-Logos",
+            "fav": "false"
         }
     ]
 

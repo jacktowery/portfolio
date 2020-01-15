@@ -30,7 +30,7 @@
     <!-- Axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!--Font Awesome-->
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/9aef0c2001.js" crossorigin="anonymous"></script>
     <!-- pts.js (header animation) -->
     <script type="text/javascript" src="js/pts.min.js"></script>
     <!-- anime.js (other animation) -->
@@ -38,10 +38,10 @@
     <!-- Scroll Reveal (scroll triggered animations) -->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <!-- Vue.js -->
-    <script>
-        //Reset at top of page
-        //ScrollReveal({ reset: true });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
     <script>
         $(document).ready(function() {
             // Add smooth scrolling to all links
@@ -306,13 +306,79 @@
         </div>
     </section>
 
-    <section id="projects" class="section is-medium is-white has-text-centered">
+    <section id="projects2" class="section is-medium is-white has-text-centered">
         <div class="content has-text-centered">
             <h1 class="title is-family-secondary is-spaced is-size-3-desktop is-size-4-mobile is-bold-700">My Projects
             </h1>
             <h2 class="subtitle is-size-5-desktop is-size-6-mobile">Here are some of my favorite recent design projects.</h2>
 
-            <div class="container has-text-centered">
+            <div class="content has-text-centered">
+                <div class="container has-text-centered">
+                    <div class="project-grid">
+                        <div class="columns is-multiline is-centered" id="projects2-columns">
+                            <div v-for="project in filteredProjects" v-if="project.fav == 'true'" :id="project.id" class="project column is-one-third">
+                                <a onclick="launchModal(this)">
+                                    <figure class="image is-4by3">
+                                        <img :src="project.imageTile">
+                                        <div class="overlay">
+                                            <div class="content">
+                                                <p class="project-title is-family-secondary is-size-3-desktop is-size-4-mobile">{{ project.title }}</p>
+                                                <p class="project-subtitle is-size-5-desktop is-size-6-mobile">{{ project.subtitleShort }}</p>
+                                                <p class="project-date is-size-6-desktop is-size-7-mobile">{{ project.date }}</p>
+                                                <!--Icons-->
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </a>
+
+                                <div class="modal">
+                                    <div class="modal-background" onclick="closeModal(this)"></div>
+                                    <div class="modal-content">
+                                        <div class="box project-modal">
+                                            <img class="is-pulled-left" :src="project.imageModal">
+                                            <p class="modal-project-title is-family-secondary is-size-3-desktop is-size-4-mobile">{{ project.title }}</p>
+                                            <p class="modal-project-subtitle is-size-5-desktop is-size-6-mobile">{{ project.subtitleLong }}</p>
+
+                                            <div class="modal-project-section modal-project-desc has-text-left has-text-grey-lighter">
+                                                <p>{{ project.description }}</p>
+                                            </div>
+
+                                            <div class="modal-project-section has-text-left clear-all">
+                                                <p class="modal-project-tags">
+                                                    <span class="is-bold-700 is-family-secondary has-text-grey-light" v-if="project.category == 'code'">Platforms:</span>
+                                                    <span class="is-bold-700 is-family-secondary has-text-grey-light" v-if="project.category == 'design'">Creative Fields:</span>
+                                                    <span v-for="platform in project.platforms" class="tag is-primary is-light is-rounded" v-html="platform"></span>
+                                                </p>
+                                            </div>
+
+                                            <div class="modal-project-section has-text-left clear-all">
+                                                <p class="modal-project-tags">
+                                                    <span class="is-bold-700 is-family-secondary has-text-grey-light">Tools Used:</span>
+                                                    <span v-for="tool in project.tools" class="tag is-light is-rounded">{{ tool }}</span>
+                                                </p>
+                                            </div>
+
+                                            <div class="modal-project-section clear-all">
+                                                <p>
+                                                    <a :href="project.url" target="_blank" class="button is-primary">View Full Project</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="modal-close is-large" aria-label="close" onclick="closeModal(this)"></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <a href="/projects" class="button is-medium is-primary is-lowercase is-bold-700 arrow-right-on-hover">View All Projects &nbsp;
+                    <div><i class="fas fa-caret-right"></i></div>
+                </a>
+            </div>
+
+            <!--<div class="container has-text-centered">
                 <div class="project-grid">
                     <div class="columns is-multiline is-centered">
                         <div class="column is-one-third">
@@ -370,24 +436,6 @@
                                 </figure>
                             </a>
                         </div>
-                        <!--
-                        <div class="column is-one-third">
-                            <a href="https://www.behance.net/gallery/86211407/Wallpaper-Designer-An-iOS-App">
-                                <figure class="image is-4by3">
-                                    <img class="" src="assets/project_covers/WallpaperDesigner.png" alt="Wallpaper Designer App">
-                                    <div class="overlay">
-                                        <div class="content">
-                                            <p class="project-title is-family-secondary is-size-3-desktop is-size-4-mobile">
-                                                Wallpaper Designer</p>
-                                            <p class="project-subtitle is-size-5-desktop is-size-6-mobile">A simple iOS
-                                                App</p>
-                                            <p class="project-date is-family-secondary">October 30, 2018</p>
-                                        </div>
-                                    </div>
-                                </figure>
-                            </a>
-                        </div>
-                        -->
                     </div>
                 </div>
             </div>
@@ -396,7 +444,7 @@
                 <div><i class="fas fa-caret-right"></i></div>
             </a>
 
-        </div>
+        </div>-->
     </section>
 
     <hr>
@@ -516,6 +564,7 @@
 
     <script src="js/headerAnimatedBG.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/projects.js"></script>
 </body>
 
 </html>
