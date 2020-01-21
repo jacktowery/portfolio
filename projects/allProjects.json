@@ -2,6 +2,28 @@
     "projects": [{
             "id": "proj-0001",
             "category": "code",
+            "title": "Chores",
+            "subtitleShort": "Keep up with your roommates",
+            "subtitleLong": "Create an apartment, add chores to the list, and assign responsibilities to roommates",
+            "date": "October 12-13, 2019",
+            "description": "Chores is an Android application created as my final project for my CSCI 4060 Mobile Development class at the University of Georgia. This app allows users to make household chores lists for their apartments, as well as assign them to roommates and track progress. I used Google Firebase for account authentication and a real time database for storing apartments, users, and chores. Users can also track scores within their own apartments with the built-in leaderboard feature.",
+            "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/a4bd2c90995069.5e2642df07690.png",
+            "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/eb586c90995069.5e2642df06f30.png",
+            "platforms": [
+                "<i class='fab fa-android'></i> &nbsp; Android App"
+            ],
+            "tools": [
+                "Android Studio",
+                "Java",
+                "Google Firebase - Authentication",
+                "Google Firebase - Realtime Database"
+            ],
+            "url": "https://www.behance.net/gallery/90995069/Chores-Keep-up-with-your-roommates",
+            "fav": "true"
+        },
+        {
+            "id": "proj-0002",
+            "category": "code",
             "title": "VENT",
             "subtitleShort": "Find Events Near You",
             "subtitleLong": "Search for concerts, sorting events, and more near you using your GPS location!",
@@ -26,7 +48,7 @@
             "fav": "true"
         },
         {
-            "id": "proj-0002",
+            "id": "proj-0003",
             "category": "design",
             "title": "The Industry - Branding",
             "subtitleShort": "Logos & Branding Guide",
@@ -46,7 +68,7 @@
             "fav": "true"
         },
         {
-            "id": "proj-0003",
+            "id": "proj-0004",
             "category": "code",
             "title": "FinalPod",
             "subtitleShort": "A Podcast App",
@@ -65,10 +87,10 @@
                 "iTunes API"
             ],
             "url": "https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App",
-            "fav": "true"
+            "fav": "false"
         },
         {
-            "id": "proj-0004",
+            "id": "proj-0005",
             "category": "code",
             "title": "Song Preview Utility",
             "subtitleShort": "An iOS App",
@@ -90,7 +112,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0005",
+            "id": "proj-0006",
             "category": "code",
             "title": "Wallpaper Designer",
             "subtitleShort": "An iOS App",
@@ -111,7 +133,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0006",
+            "id": "proj-0007",
             "category": "design",
             "title": "YMCA Camp Northwest Logo",
             "subtitleShort": "New Logo for 2018",
@@ -131,7 +153,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0007",
+            "id": "proj-0008",
             "category": "design",
             "title": "UGA® Miracle Rebranding",
             "subtitleShort": "2017 Rebranding Project",
@@ -153,7 +175,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0008",
+            "id": "proj-0009",
             "category": "design",
             "title": "YMCA Play Center Logos",
             "subtitleShort": "For the Northwest Family YMCA",
