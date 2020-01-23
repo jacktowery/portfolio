@@ -57,11 +57,11 @@ var skills1 = [
 ]
 
 var skills2 = [
-    ["Swift (Xcode)", 45],
-    ["Java (Android)", 60],
     ["HTML", 85],
     ["CSS/SASS", 80],
     ["JavaScript", 70],
+    ["Swift (Xcode)", 45],
+    ["Java (Android)", 60],
     ["PHP", 30],
     ["MySQL", 35],
     ["Vue.js", 40]

@@ -5,7 +5,7 @@
             "title": "Chores",
             "subtitleShort": "Keep up with your roommates",
             "subtitleLong": "Create an apartment, add chores to the list, and assign responsibilities to roommates",
-            "date": "October 12-13, 2019",
+            "date": "December 2019",
             "description": "Chores is an Android application created as my final project for my CSCI 4060 Mobile Development class at the University of Georgia. This app allows users to make household chores lists for their apartments, as well as assign them to roommates and track progress. I used Google Firebase for account authentication and a real time database for storing apartments, users, and chores. Users can also track scores within their own apartments with the built-in leaderboard feature.",
             "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/a4bd2c90995069.5e2642df07690.png",
             "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/eb586c90995069.5e2642df06f30.png",
