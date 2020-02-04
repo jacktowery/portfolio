@@ -141,6 +141,30 @@
         {
             "id": "proj-0007",
             "category": "design",
+            "title": "UGA® Miracle Website Redesign",
+            "subtitleShort": "2018 Redesign Overhaul and Online Store",
+            "subtitleLong": "New Hosting, New Design, Reorganized Pages, New Online Store",
+            "date": "August 2018",
+            "description": "This project is Step 2 in a larger effort to reorganize and re-brand the non-profit student organization UGA® Miracle. I have moved the hosting of the website to Squarespace for ease of updates for staff that are not tech-adept, completed a complete design overhaul featuring two-tone images/videos, custom CSS injections, and a new online storefront leveraging Stripe Payments. This work was done as part of my service the Executive Board of UGA® Miracle.",
+            "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/41868291744989.5e39c6de62d62.png",
+            "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/adcbfa91744989.5e39c6de633de.png",
+            "team": "false",
+            "platforms": [
+                "<i class=\"fas fa-globe-americas\"></i> &nbsp; Web Design",
+                "<i class=\"fas fa-swatchbook\"></i> &nbsp; Branding"
+            ],
+            "tools": [
+                "Adobe Illustrator",
+                "Adobe Lightoom",
+                "Squarespace",
+                "Stripe Payments"
+            ],
+            "url": "https://www.behance.net/gallery/91744989/UGA-Miracle-2018-Website-Redesign",
+            "fav": "false"
+        },
+        {
+            "id": "proj-0008",
+            "category": "design",
             "title": "YMCA Camp Northwest Logo",
             "subtitleShort": "New Logo for 2018",
             "subtitleLong": "New Logo and Weekly Theme Buttons",
@@ -160,7 +184,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0008",
+            "id": "proj-0009",
             "category": "design",
             "title": "Over The Line",
             "subtitleShort": "A Student Documentary",
@@ -191,7 +215,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0009",
+            "id": "proj-0010",
             "category": "design",
             "title": "UGA® Miracle Rebranding",
             "subtitleShort": "2017 Rebranding Project",
@@ -214,7 +238,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0010",
+            "id": "proj-0011",
             "category": "design",
             "title": "YMCA Play Center Logos",
             "subtitleShort": "For the Northwest Family YMCA",
