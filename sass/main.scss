@@ -510,7 +510,7 @@ progress.is-large+.progress-value {
 .project-grid .project-title {
     color: #ffffff;
     font-weight: 700;
-    margin: 0 !important;
+    margin: 0 0 0.1em 0 !important;
     line-height: 1 !important;
 }
 
@@ -526,6 +526,10 @@ progress.is-large+.progress-value {
     margin: 0 !important;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.project-grid .content {
+    margin: 0 12px 0 12px;
 }
 
 // Modal
@@ -588,8 +592,8 @@ progress.is-large+.progress-value {
 .project-modal .modal-project-title {
     color: $one-med-blue;
     font-weight: 700;
-    margin: 0 0 20px 0 !important;
-    line-height: 2 !important;
+    margin: 0 0 0.3em 0 !important;
+    line-height: 1 !important;
 }
 
 .project-modal .modal-project-subtitle {

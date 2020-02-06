@@ -96,6 +96,32 @@
         {
             "id": "proj-0005",
             "category": "code",
+            "title": "Cinema System",
+            "subtitleShort": "Full-Stack Web Application",
+            "subtitleLong": "A full-stack web application for managing a local theater",
+            "date": "December 2018",
+            "description": "The Cinema E-Booking System is a web application created as my term project for my CSCI 4050 Software Engineering class at the University of Georgia. This app allows users browse currently showing and upcoming movies at a theoretical local theater and buy tickets. It also allows theater administrators to manage movies, showtimes, halls, users, promotions, and sales reports for the theater. All data is managed in a secured MySQL database that communicates with the application server.",
+            "imageTile": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/1a259091797369.5e3af6431ec6e.png",
+            "imageModal": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/1a259091797369.5e3af6431ec6e.png",
+            "team": "false",
+            "platforms": [
+                "<i class=\"fas fa-globe-americas\"></i> &nbsp; Web App"
+            ],
+            "tools": [
+                "Eclipse IDE",
+                "Java",
+                "Apache",
+                "MySQL",
+                "MySQL Studio",
+                "Java Servlet Pages",
+                "Bootstrap"
+            ],
+            "url": "https://www.behance.net/gallery/91797369/Cinema-Full-Stack-Web-App",
+            "fav": "false"
+        },
+        {
+            "id": "proj-0005",
+            "category": "code",
             "title": "Song Preview Utility",
             "subtitleShort": "An iOS App",
             "subtitleLong": "An iOS App - Jukebox project for NMIX 4310 Rich Media Production",
