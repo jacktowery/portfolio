@@ -159,7 +159,7 @@ c-0.8,1.1-1.9,2.3-3.1,3.6c-1.2,1.3-3.6,3.2-7.2,5.5c-3.6,2.3-7.1,3.5-10.5,3.5C234
                         <div v-for="project in filteredProjects" :id="project.id" class="project column is-one-third">
                             <a onclick="launchModal(this)">
                                 <figure class="image is-4by3">
-                                    <img :src="project.imageTile">
+                                    <img :src="project.imageTile" :alt="project.title">
                                     <div class="overlay">
                                         <div class="content">
                                             <p class="project-title is-family-secondary is-size-3-desktop is-size-4-mobile">{{ project.title }}</p>
@@ -234,79 +234,6 @@ c-0.8,1.1-1.9,2.3-3.1,3.6c-1.2,1.3-3.6,3.2-7.2,5.5c-3.6,2.3-7.1,3.5-10.5,3.5C234
                                 <button class="modal-close is-large" aria-label="close" onclick="closeModal(this)"></button>
                             </div>
                         </div>
-
-                        <!--<div id="testC" class="column is-one-third">
-                            <a onclick='launchModal("testC")'>
-                                <figure class="image is-4by3">
-                                    <img class="" src="../assets/project_covers/VENT_mockup2_awards.png" alt="VENT: Find Events Near You">
-                                    <div class="overlay">
-                                        <div class="content">
-                                            <p class="project-title is-family-secondary is-size-3-desktop is-size-4-mobile">
-                                                VENT</p>
-                                            <p class="project-subtitle is-size-5-desktop is-size-6-mobile">Find Events Near You</p>
-                                            <p class="project-icons">
-                                                <i class="fas fa-globe-americas"></i>
-                                                <i class="fas fa-mobile-alt"></i>
-                                                <i class="fas fa-desktop"></i>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </figure>
-                            </a>
-                            <div class="modal">
-                                <div class="modal-background" onclick="closeModal('testC')"></div>
-                                <div class="modal-content">
-                                    <div class="box project-modal">
-                                        <img class="is-pulled-left" src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/40140d87459281.5db8d460c0eff.png"
-                                            alt="VENT: Find Events Near You">
-                                        <p class="modal-project-title is-family-secondary is-size-3-desktop is-size-4-mobile">VENT</p>
-                                        <p class="modal-project-subtitle is-size-5-desktop is-size-6-mobile">Search for concerts, sorting events, and more near you using your GPS
-                                            location!</p>
-
-                                        <div class="modal-project-section modal-project-desc has-text-left has-text-grey-lighter">
-                                            <p>
-                                                When creating VENT, I was inspired by the functionality of the online dating app Tinder, and specifically the way that you are
-                                                presented with choices, swiping right for "interested" and left for "not interested". This type of interaction is intuitive and easy
-                                                to understand for users, especially those on mobile devices. So, instead of a vertical list with infinite-scrolling that you may
-                                                find on other ticket finding applications, I decided to redesign event searching with a new and more user-friendly method of
-                                                interaction.
-                                            </p>
-                                        </div>
-
-                                        <div class="modal-project-section has-text-left clear-all">
-                                            <p class="modal-project-tags">
-                                                <span class="is-bold-700 is-family-secondary has-text-grey-light">Platforms:</span>
-                                                <span class="tag is-primary is-light is-rounded"><i class="fas fa-globe-americas"></i> &nbsp; Web App</span>
-                                                <span class="tag is-primary is-light is-rounded"><i class="fas fa-desktop"></i>&nbsp; / &nbsp;<i class="fas fa-mobile-alt"></i>
-                                                    &nbsp;
-                                                    Responsive</span>
-                                            </p>
-                                        </div>
-
-                                        <div class="modal-project-section has-text-left clear-all">
-                                            <p class="modal-project-tags">
-                                                <span class="is-bold-700 is-family-secondary has-text-grey-light">Tools Used:</span>
-                                                <span class="tag is-light is-rounded">HTML5</span>
-                                                <span class="tag is-light is-rounded">SASS</span>
-                                                <span class="tag is-light is-rounded">JavaScript</span>
-                                                <span class="tag is-light is-rounded">Node.js</span>
-                                                <span class="tag is-light is-rounded">Bulma</span>
-                                                <span class="tag is-light is-rounded">anime.js</span>
-                                                <span class="tag is-light is-rounded">Adobe Illustrator</span>
-                                            </p>
-                                        </div>
-
-                                        <div class="modal-project-section clear-all">
-                                            <p>
-                                                <a href="https://vent.jacktowery.com" target="_blank" class="button is-primary">View Project</a>
-                                            </p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <button class="modal-close is-large" aria-label="close" onclick="closeModal('testC')"></button>
-                            </div>
-                        </div>-->
                     </div>
                 </div>
             </div>

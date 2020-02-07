@@ -1,0 +1,166 @@
+// ! TEST SASS FOR DEV PAGE
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700');
+@import url("https://use.typekit.net/yuv5nvd.css");
+
+// Brand Colors
+$one-light-gray: #91959B;
+$one-light-blue: #7F848E;
+$one-highlight-blue: #515A6B;
+$one-med-blue: #282c34;
+$one-dark-blue: #21252B;
+$one-darkest-blue: #0e1216;
+$purple3: #8c5fe7;
+
+// ! Update Bulma's global variables
+// Colors
+$black: $one-dark-blue;
+$grey-darker: $one-med-blue;
+$grey-dark: $one-med-blue;
+$grey: $one-highlight-blue;
+$grey-lighter: $one-light-blue;
+$grey-light: $one-light-gray;
+
+// Apply Colors
+$primary: $purple3;
+$link: $primary;
+
+// Fonts
+$family-sans-serif: 'Nunito', sans-serif;
+$family-primary: $family-sans-serif;
+$family-secondary: proxima-nova, 'Nunito', sans-serif;
+
+// Spacing
+//$body-line-height: 1.8;
+
+// Boxes
+$box-radius: 20px;
+$box-shadow: 0 6px 6px 0 #dfdfdf80, 0 0 0 1px #dfdfdf;
+
+// Progress Bars
+$progress-bar-background-color: #d5dde2;
+
+//* ------------------------------------------------------
+// Import only what you need from Bulma
+@import "../node_modules/bulma/bulma.sass";
+@import '../node_modules/bulma-timeline/dist/css/bulma-timeline.sass'; // Bulma timeline extension
+//* ------------------------------------------------------
+
+//* ------------------------------------------------------
+//* FONT MODIFIERS
+//* ------------------------------------------------------
+
+.is-bold-500 {
+  font-weight: 500 !important;
+}
+
+.is-bold-600 {
+  font-weight: 600 !important;
+}
+
+.is-bold-700 {
+  font-weight: 700 !important;
+}
+
+.has-extra-kerning {
+  letter-spacing: 3pt;
+}
+
+.is-uppercase {
+  text-transform: uppercase;
+}
+
+.is-lowercase {
+  text-transform: lowercase;
+}
+
+//* ------------------------------------------------------
+//* SPLASH ZONE (HEADER)
+//* ------------------------------------------------------
+
+#splashzone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: $grey-dark;
+}
+
+#splash-text-left {
+  position: relative;
+  width: 65%;
+}
+
+#splash-title {
+  position: relative;
+  font-size: calc(3rem + 5vw);
+  font-style: italic;
+  animation: slidein-from-left 0.8s;
+  line-height: 0.8;
+  z-index: 2;
+}
+
+#splash-sub {
+  position: relative;
+  animation: slidein-from-left 0.8s;
+  z-index: 2;
+}
+
+#splash-img {
+  position: absolute;
+  height: calc(200px + 30vw);
+  width: calc(200px + 30vw);
+  left: 50%;
+  top: calc(45% - 10vw);
+  animation: slidein-from-right 0.8s;
+  z-index: 1;
+}
+
+
+//* ------------------------------------------------------
+//* ANIMATIONS
+//* ------------------------------------------------------
+@keyframes slidein-from-left {
+  from {
+    transform: translate(-200px, 0px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slidein-from-right {
+  from {
+    transform: translate(200px, 0px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slidein-from-top {
+  from {
+    transform: translate(0px, -500px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slidein-from-bottom {
+  from {
+    transform: translate(0px, 500px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}

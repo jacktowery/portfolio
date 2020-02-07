@@ -341,7 +341,7 @@
                             <div v-for="project in filteredProjects" v-if="project.fav == 'true'" :id="project.id" class="project column is-one-third">
                                 <a onclick="launchModal(this)">
                                     <figure class="image is-4by3">
-                                        <img :src="project.imageTile">
+                                        <img :src="project.imageTile" :alt="project.title">
                                         <div class="overlay">
                                             <div class="content">
                                                 <p class="project-title is-family-secondary is-size-3-desktop is-size-4-mobile">{{ project.title }}</p>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="sr">
+
+<head>
+    <meta charset="utf-8">
+    <meta property="og:title" content="Jack Towery | Developer, Designer, Researcher">
+    <meta property="og:description" content="I believe in user-centered, accessible design that protects everyone’s rights to be a citizen of our digital society.">
+    <meta property="og:site_name" content="Jack Towery - Portfolio">
+    <meta property="og:url" content="https://jacktowery.com">
+    <meta name="robots" content="index">
+    <link rel="canonical" href="https://jacktowery.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/test.css">
+
+    <!--ICONS & FAVICONS-->
+    <!-- Generic -->
+    <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="assets/icons/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="assets/icons/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="assets/icons/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="assets/icons/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="assets/icons/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="assets/icons/favicon-228.png" sizes="228x228">
+    <!-- Android -->
+    <link rel="shortcut icon" sizes="196x196" href="assets/icons/favicon-196.png">
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="assets/icons/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="assets/icons/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="assets/icons/favicon-180.png" sizes="180x180">
+
+    <!--SCRIPTS & PACKAGES-->
+    <script src="https://kit.fontawesome.com/9aef0c2001.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        // SMOOTH SCROLLING
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    // Store hash
+                    var hash = this.hash;
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        //window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+    <!--ANALYTICS-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157510538-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157510538-1');
+    </script>
+
+    <title>Jack Towery | Developer, Designer, Researcher</title>
+</head>
+
+<body>
+
+    <section id="splashzone">
+        <div id="splash-text-left">
+            <div id="splash-title" class="title is-family-secondary has-text-white is-bold-700 lax">Jack Towery</div>
+            <div id="splash-sub" class="subtitle is-size-4-desktop is-size-5-touch has-text-white lax">Developer, Designer, Researcher</div>
+            <div id="splash-img">
+                <img src="https://via.placeholder.com/600x400?text=Cool+Design+Thing">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- ENDING SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+    <script>
+        // from https://github.com/alexfoxy/laxxx
+        window.onload = function() {
+            lax.setup() // init
+
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+
+            window.requestAnimationFrame(updateLax)
+        }
+    </script>
+    <script src="js/index.js"></script>
+
+</body>
+
+
+</html>
