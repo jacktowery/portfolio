@@ -75,6 +75,16 @@ $progress-bar-background-color: #d5dde2;
 }
 
 //* ------------------------------------------------------
+//* HTML & BODY
+//* ------------------------------------------------------
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+//* ------------------------------------------------------
 //* SPLASH ZONE (HEADER)
 //* ------------------------------------------------------
 
@@ -84,37 +94,57 @@ $progress-bar-background-color: #d5dde2;
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
   background-color: $grey-dark;
 }
 
 #splash-text-left {
   position: relative;
-  width: 65%;
+  width: 80%;
 }
 
 #splash-title {
   position: relative;
   font-size: calc(3rem + 5vw);
   font-style: italic;
-  animation: slidein-from-left 0.8s;
   line-height: 0.8;
   z-index: 2;
+  animation: slidein-from-left 0.8s;
 }
 
 #splash-sub {
   position: relative;
-  animation: slidein-from-left 0.8s;
   z-index: 2;
+  animation: slidein-from-left 0.8s;
 }
 
 #splash-img {
   position: absolute;
-  height: calc(200px + 30vw);
-  width: calc(200px + 30vw);
-  left: 50%;
-  top: calc(45% - 10vw);
-  animation: slidein-from-right 0.8s;
+  //width: calc(30vw);
+  //left: 50%;
+  //top: calc(45% - 10vw);
   z-index: 1;
+  animation: slidein-from-right 0.8s;
+}
+
+// MEDIA-SPECIFIC STYLES
+// Mobile
+@media (max-width: 920px) {
+  #splash-text-left {
+    text-align: center;
+  }
+  #splash-title, #splash-sub {
+  }
+  #splash-img {
+  }
+}
+// Tablet
+@media (max-width: 530px) {
+
+}
+// Desktop
+@media (max-width: 350px) {
+
 }
 
 

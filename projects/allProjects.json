@@ -2,6 +2,35 @@
     "projects": [{
             "id": "proj-0001",
             "category": "code",
+            "title": "MEAL: Accessible Eating",
+            "subtitleShort": "UGAHacks 5 Hackathon Project",
+            "subtitleLong": "MEAL helps Georgia families locate and access healthy foods through summer meal programs, farmer's markets, and SNAP.",
+            "date": "February 2020",
+            "description": "Access to nutritious foods is becoming increasingly difficult for Georgians. The food that students on Free and Reduced Lunch programs receive may be the only healthy meal they get each day. When school is out of session, this access is limited to local non-profits potentially miles from their school. Many families also rely on SNAP (food stamps) to reduce the cost of food, but it’s difficult to find out where SNAP benefits are accepted. Students and families need an easy way to discover sources of healthy food in their communities. MEAL aims to help counteract this problem by providing users with resources to locate nutritious and accessible food in their community.",
+            "imageTile": "https://mir-s3-cdn-cf.behance.net/projects/max_808/90059392069871.Y3JvcCw1OTkzLDQ2ODgsMCww.png",
+            "imageModal": "https://mir-s3-cdn-cf.behance.net/projects/max_808/90059392069871.Y3JvcCw1OTkzLDQ2ODgsMCww.png",
+            "team": "false",
+            "platforms": [
+                "<i class='fab fa-android'></i> &nbsp; Android App",
+                "<i class='fab fa-apple'></i> &nbsp; iOS App"
+            ],
+            "tools": [
+                "React Native",
+                "JavaScript",
+                "Node.js",
+                "npm",
+                "Android Studio",
+                "XCode",
+                "React Native Elements",
+                "Adobe Illustrator",
+                "Adobe Photoshop"
+            ],
+            "url": "https://www.behance.net/gallery/92069871/MEAL-Accessible-Eating-BETA",
+            "fav": "true"
+        },
+        {
+            "id": "proj-0002",
+            "category": "code",
             "title": "Chores",
             "subtitleShort": "Keep up with your roommates",
             "subtitleLong": "Create an apartment, add chores to the list, and assign responsibilities to roommates",
@@ -23,7 +52,7 @@
             "fav": "true"
         },
         {
-            "id": "proj-0002",
+            "id": "proj-0003",
             "category": "code",
             "title": "VENT",
             "subtitleShort": "Find Events Near You",
@@ -50,7 +79,7 @@
             "fav": "true"
         },
         {
-            "id": "proj-0003",
+            "id": "proj-0004",
             "category": "design",
             "title": "The Industry - Branding",
             "subtitleShort": "Logos & Branding Guide",
@@ -68,10 +97,10 @@
                 "Adobe Illustrator"
             ],
             "url": "https://www.behance.net/gallery/89269439/The-Industry-at-UGA-Branding",
-            "fav": "true"
+            "fav": "false"
         },
         {
-            "id": "proj-0004",
+            "id": "proj-0005",
             "category": "code",
             "title": "FinalPod",
             "subtitleShort": "A Podcast App",
@@ -94,7 +123,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0005",
+            "id": "proj-0006",
             "category": "code",
             "title": "Cinema System",
             "subtitleShort": "Full-Stack Web Application",
@@ -120,7 +149,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0005",
+            "id": "proj-0007",
             "category": "code",
             "title": "Song Preview Utility",
             "subtitleShort": "An iOS App",
@@ -143,7 +172,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0006",
+            "id": "proj-0008",
             "category": "code",
             "title": "Wallpaper Designer",
             "subtitleShort": "An iOS App",
@@ -165,7 +194,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0007",
+            "id": "proj-0009",
             "category": "design",
             "title": "UGA® Miracle Website Redesign",
             "subtitleShort": "2018 Redesign Overhaul and Online Store",
@@ -189,7 +218,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0008",
+            "id": "proj-0010",
             "category": "design",
             "title": "YMCA Camp Northwest Logo",
             "subtitleShort": "New Logo for 2018",
@@ -210,7 +239,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0009",
+            "id": "proj-0011",
             "category": "design",
             "title": "Over The Line",
             "subtitleShort": "A Student Documentary",
@@ -241,7 +270,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0010",
+            "id": "proj-0012",
             "category": "design",
             "title": "UGA® Miracle Rebranding",
             "subtitleShort": "2017 Rebranding Project",
@@ -264,7 +293,7 @@
             "fav": "false"
         },
         {
-            "id": "proj-0011",
+            "id": "proj-0013",
             "category": "design",
             "title": "YMCA Play Center Logos",
             "subtitleShort": "For the Northwest Family YMCA",
