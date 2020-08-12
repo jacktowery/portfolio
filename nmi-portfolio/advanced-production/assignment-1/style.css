@@ -1,0 +1,60 @@
+body {
+    padding: 10px 20px 0px 20px;
+}
+
+h1,h2,h3,h4,h5,h6,p,a,body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Link Styling*/
+a {
+    text-decoration: none;
+    color: #019283;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    background-color: #494949;
+}
+
+/*Button Styling*/
+.button {
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px #494949;
+    padding: 8px;
+    color: #ffffff;
+    font-weight: 700;
+    background-color: #019283;
+    background-image: none;
+}
+.button:hover {
+    background-color: #494949;
+    text-decoration: underline;
+    color:#fff;
+}
+.button:focus {
+    background-color: #222222;
+    text-decoration: underline;
+}
+.button:active {
+    background-color: #494949;
+}
+.button:visited {
+    background-color: #004d45;
+}
+
+.bg-img {
+    background-color: #019283;
+    background-image: url(pattern1.png);
+    background-repeat: repeat;
+    background-position: 0 0;
+    color: #ff0000;
+}
+
+/*Page 2 Image Styling*/
+img {
+    max-height: 400px;
+    margin: 0px 20px 0px 0px;
+}

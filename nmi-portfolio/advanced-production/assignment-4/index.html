@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Generic -->
+    <link rel="icon" href="logos/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="logos/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="logos/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="logos/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="logos/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="logos/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="logos/favicon-228.png" sizes="228x228">
+    <!-- Android -->
+    <link rel="shortcut icon" sizes="196x196" href="logos/favicon-196.png">
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="logos/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="logosfavicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="logos/favicon-180.png" sizes="180x180">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/9aef0c2001.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function () {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+        });
+    </script>
+
+    <title>Cats</title>
+</head>
+
+<body class="">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="logos/cat_full.svg" width="150">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" alt="Cats" href="index.html">
+                            <i class="fas fa-cat"></i>
+                        </a>
+                        <a class="button is-primary is-light" alt="Random" href="random.html">
+                            <i class="fas fa-random"></i>
+                        </a>
+                        <a class="button is-primary is-light" alt="Info" href="info.html">
+                            <i class="fas fa-info-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered has-text-weight-bold">All Breeds</h1>
+
+            <div id="app" class="columns is-multiline">
+                <!-- COLUMN 1 -->
+                <div class="column is-one-third">
+                    <div v-for="(eachCat,index) in breeds" v-if="index % 3 == 1">
+                        <div class="card has-text-white has-background-link" :id="eachCat.breeds[0].id">
+                            <div class="card-image">
+                                <div id="cat-slider">
+                                    <cat-slideshow :catid="eachCat.breeds[0].id"></cat-slideshow>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-size-4 has-text-white">{{eachCat.breeds[0].name}}</p>
+                                        <p class="subtitle is-size-6 has-text-white is-italic">
+                                            {{eachCat.breeds[0].origin}}
+                                        </p>
+                                        <p class="is-size-7 has-text-white is-italic">{{eachCat.breeds[0].temperament}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>{{eachCat.breeds[0].description}}</p>
+                                <br>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Affection Level
+                                    &nbsp;<i class="fas fa-heart"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].affection_level > 3, 'is-warning': eachCat.breeds[0].affection_level == 3, 'is-danger': eachCat.breeds[0].affection_level < 3 }"
+                                    :value="eachCat.breeds[0].affection_level" max="5"></progress>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Child Friendly
+                                    &nbsp;<i class="fas fa-child"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].child_friendly > 3, 'is-warning': eachCat.breeds[0].child_friendly == 3, 'is-danger': eachCat.breeds[0].child_friendly < 3 }"
+                                    :value="eachCat.breeds[0].child_friendly" max="5"></progress>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Dog Friendly
+                                    &nbsp;<i class="fas fa-dog"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].dog_friendly > 3, 'is-warning': eachCat.breeds[0].dog_friendly == 3, 'is-danger': eachCat.breeds[0].dog_friendly < 3 }"
+                                    :value="eachCat.breeds[0].dog_friendly" max="5"></progress>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Energy Level
+                                    &nbsp;<i class="fas fa-bolt"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].energy_level > 3, 'is-warning': eachCat.breeds[0].energy_level == 3, 'is-danger': eachCat.breeds[0].energy_level < 3 }"
+                                    :value="eachCat.breeds[0].energy_level" max="5"></progress>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Intelligence
+                                    &nbsp;<i class="fas fa-brain"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].intelligence > 3, 'is-warning': eachCat.breeds[0].intelligence == 3, 'is-danger': eachCat.breeds[0].intelligence < 3 }"
+                                    :value="eachCat.breeds[0].intelligence" max="5"></progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMN 2 -->
+                <div class="column is-one-third">
+                    <div v-for="(eachCat,index) in breeds" v-if="index % 3 == 2">
+                        <div class="card has-text-white has-background-info">
+                            <div class="card-image">
+                                <div id="cat-slider">
+                                    <cat-slideshow :catid="eachCat.breeds[0].id"></cat-slideshow>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-size-4 has-text-white">{{eachCat.breeds[0].name}}</p>
+                                        <p class="subtitle is-size-6 has-text-white is-italic">
+                                            {{eachCat.breeds[0].origin}}
+                                        </p>
+                                        <p class="is-size-7 has-text-white is-italic">{{eachCat.breeds[0].temperament}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>{{eachCat.breeds[0].description}}</p>
+                                <br>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Affection Level
+                                    &nbsp;<i class="fas fa-heart"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].affection_level > 3, 'is-warning': eachCat.breeds[0].affection_level == 3, 'is-danger': eachCat.breeds[0].affection_level < 3 }"
+                                    :value="eachCat.breeds[0].affection_level" max="5"></progress>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Child Friendly
+                                    &nbsp;<i class="fas fa-child"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].child_friendly > 3, 'is-warning': eachCat.breeds[0].child_friendly == 3, 'is-danger': eachCat.breeds[0].child_friendly < 3 }"
+                                    :value="eachCat.breeds[0].child_friendly" max="5"></progress>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Dog Friendly
+                                    &nbsp;<i class="fas fa-dog"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].dog_friendly > 3, 'is-warning': eachCat.breeds[0].dog_friendly == 3, 'is-danger': eachCat.breeds[0].dog_friendly < 3 }"
+                                    :value="eachCat.breeds[0].dog_friendly" max="5"></progress>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Energy Level
+                                    &nbsp;<i class="fas fa-bolt"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].energy_level > 3, 'is-warning': eachCat.breeds[0].energy_level == 3, 'is-danger': eachCat.breeds[0].energy_level < 3 }"
+                                    :value="eachCat.breeds[0].energy_level" max="5"></progress>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Intelligence
+                                    &nbsp;<i class="fas fa-brain"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].intelligence > 3, 'is-warning': eachCat.breeds[0].intelligence == 3, 'is-danger': eachCat.breeds[0].intelligence < 3 }"
+                                    :value="eachCat.breeds[0].intelligence" max="5"></progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMN 3 -->
+                <div class="column is-one-third">
+                    <div v-for="(eachCat,index) in breeds" v-if="index % 3 == 0">
+                        <div class="card has-text-white has-background-link">
+                            <div class="card-image">
+                                <div id="cat-slider">
+                                    <cat-slideshow :catid="eachCat.breeds[0].id"></cat-slideshow>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-size-4 has-text-white">{{eachCat.breeds[0].name}}</p>
+                                        <p class="subtitle is-size-6 has-text-white is-italic">
+                                            {{eachCat.breeds[0].origin}}
+                                        </p>
+                                        <p class="is-size-7 has-text-white is-italic">{{eachCat.breeds[0].temperament}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>{{eachCat.breeds[0].description}}</p>
+                                <br>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Affection Level
+                                    &nbsp;<i class="fas fa-heart"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].affection_level > 3, 'is-warning': eachCat.breeds[0].affection_level == 3, 'is-danger': eachCat.breeds[0].affection_level < 3 }"
+                                    :value="eachCat.breeds[0].affection_level" max="5"></progress>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Child Friendly
+                                    &nbsp;<i class="fas fa-child"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].child_friendly > 3, 'is-warning': eachCat.breeds[0].child_friendly == 3, 'is-danger': eachCat.breeds[0].child_friendly < 3 }"
+                                    :value="eachCat.breeds[0].child_friendly" max="5"></progress>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Dog Friendly
+                                    &nbsp;<i class="fas fa-dog"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].dog_friendly > 3, 'is-warning': eachCat.breeds[0].dog_friendly == 3, 'is-danger': eachCat.breeds[0].dog_friendly < 3 }"
+                                    :value="eachCat.breeds[0].dog_friendly" max="5"></progress>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Energy Level
+                                    &nbsp;<i class="fas fa-bolt"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].energy_level > 3, 'is-warning': eachCat.breeds[0].energy_level == 3, 'is-danger': eachCat.breeds[0].energy_level < 3 }"
+                                    :value="eachCat.breeds[0].energy_level" max="5"></progress>
+                                <p class="has-text-white is-size-7 has-text-weight-bold">Intelligence
+                                    &nbsp;<i class="fas fa-brain"></i>
+                                </p>
+                                <progress class="progress is-small"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].intelligence > 3, 'is-warning': eachCat.breeds[0].intelligence == 3, 'is-danger': eachCat.breeds[0].intelligence < 3 }"
+                                    :value="eachCat.breeds[0].intelligence" max="5"></progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+</body>
+<script src="catshow.js"></script>
+
+</html>

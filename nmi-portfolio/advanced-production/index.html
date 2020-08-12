@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- ICONS & FAVICONS -->
+    <!-- Generic -->
+    <link rel="icon" href="../../assets/icons/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../assets/icons/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="../../assets/icons/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="../../assets/icons/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="../../assets/icons/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="../../assets/icons/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="../../assets/icons/favicon-228.png" sizes="228x228">
+    <!-- Android -->
+    <link rel="shortcut icon" sizes="196x196" href="../../assets/icons/favicon-196.png">
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="../../assets/icons/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="../../assets/icons/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="../../assets/icons/favicon-180.png" sizes="180x180">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/9aef0c2001.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157510538-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157510538-1');
+    </script>
+
+
+    <!-- Smooth scroll -->
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    // Store hash
+                    var hash = this.hash;
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+    <title>Advanced Production | Jack Towery</title>
+
+</head>
+
+<body>
+
+
+
+    <section class="section">
+        <a href="/nmi-portfolio/"><i class="fas fa-arrow-circle-left"></i>&nbsp; BACK</a>
+        <br><br>
+        <div class="container">
+            <img src="nmi-logo-small.png" class="is-pulled-left" alt="New Media Institute" style="margin-right: 1em;">
+            <h1 class="title">NMIX 5110 - Advanced New Media Production</h1>
+            <h2 class="subtitle">Exercises & Assignments</h2>
+            <hr>
+        </div>
+
+
+        <div class="container">
+
+            <div class="columns is-centered">
+                <div class="column is-two-thirds">
+                    <article class="panel is-link">
+                        <p class="panel-heading">NMIX 5110: Advanced Production</p>
+                        <p class="panel-tabs">
+                            <a id="head5110-1" onclick="sort5110(1)" class="is-active">HTML/CSS </a>
+                            <a id="head5110-2" onclick="sort5110(2)">JavaScript</a>
+                            <a id="head5110-3" onclick="sort5110(3)">Vue.js</a>
+                            <a id="head5110-4" onclick="sort5110(4)">Miscellaneous</a>
+                            <a id="head5110-5" onclick="sort5110(5)">Final Project</a>
+                        </p>
+
+                        <!-- HTML/CSS -->
+                        <a class="panel-block sort5110-1" href="e1-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-html5"></i>
+                            </span>
+                            Exercise 1 - HTML Basics
+                        </a>
+                        <a class="panel-block sort5110-1" href="e2-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-html5"></i>
+                            </span>
+                            Exercise 2 - Lists, Links, and Web Fonts
+                        </a>
+                        <a class="panel-block sort5110-1" href="e3-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-html5"></i>
+                            </span>
+                            Exercise 3 - More HTML
+                        </a>
+                        <a class="panel-block sort5110-1" href="assignment-1">
+                            <span class="panel-icon">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </span>
+                            <strong class="has-text-link">Assignment 1</strong>
+                        </a>
+                        <a class="panel-block sort5110-1" href="e4-1/boxModel.html">
+                            <span class="panel-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </span>
+                            Exercise 4 - Intro CSS
+                        </a>
+                        <a class="panel-block sort5110-1" href="e6-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </span>
+                            Exercise 5 - CSS Text Styling
+                        </a>
+                        <a class="panel-block sort5110-1" href="e6-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </span>
+                            Exercise 6 - Basic Box Exercise
+                        </a>
+                        <a class="panel-block sort5110-1" href="e7-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </span>
+                            Exercise 7 - Flexbox
+                        </a>
+
+                        <!-- JavaScript-->
+                        <a class="panel-block sort5110-2" href="e8-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 8 - Calculate
+                        </a>
+                        <a class="panel-block sort5110-2" href="e9-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 9.1 - Introduction to Arrays
+                        </a>
+                        <a class="panel-block sort5110-2" href="e9-2">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 9.2 - Build a Slideshow With Arrays
+                        </a>
+                        <a class="panel-block sort5110-2" href="assignment-2">
+                            <span class="panel-icon">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </span>
+                            <strong class="has-text-link">Assignment 2</strong>
+                        </a>
+                        <a class="panel-block sort5110-2" href="e10-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 10 - Conditional Exercise
+                        </a>
+                        <a class="panel-block sort5110-2" href="e11-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 11.1 - Controlling CSS with Javascript
+                        </a>
+                        <a class="panel-block sort5110-2" href="e11-2/ship.html">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 11.2 - Space Ship!
+                        </a>
+                        <a class="panel-block sort5110-2" href="e12-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 12 - Objects
+                        </a>
+                        <a class="panel-block sort5110-2" href="e13-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 13 - Nested Objects
+                        </a>
+                        <a class="panel-block sort5110-2" href="e14-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 14 - Let's Play Cards!
+                        </a>
+                        <a class="panel-block sort5110-2" href="e15-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 15 - APIs: Asteroids
+                        </a>
+                        <a class="panel-block sort5110-2" href="e16-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 16.1 - APIs: Trivia
+                        </a>
+                        <a class="panel-block sort5110-2" href="e16-2">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 16.2 - APIs: Trivia (Multiple Questions)
+                        </a>
+                        <a class="panel-block sort5110-2" href="e17-1">
+                            <span class="panel-icon">
+                                <i class="fab fa-js"></i>
+                            </span>
+                            Exercise 17 - APIs: River Data
+                        </a>
+                        <a class="panel-block sort5110-2" href="assignment-3">
+                            <span class="panel-icon">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </span>
+                            <strong class="has-text-link">Assignment 3</strong>
+                        </a>
+
+                        <!-- Vue.js -->
+                        <a class="panel-block sort5110-3" href="vueOne">
+                            <span class="panel-icon">
+                                <i class="fab fa-vuejs"></i>
+                            </span>
+                            Vue 1 - Intro
+                        </a>
+                        <a class="panel-block sort5110-3" href="vueTwo">
+                            <span class="panel-icon">
+                                <i class="fab fa-vuejs"></i>
+                            </span>
+                            Vue 2
+                        </a>
+                        <a class="panel-block sort5110-3" href="vueThree">
+                            <span class="panel-icon">
+                                <i class="fab fa-vuejs"></i>
+                            </span>
+                            Vue 3- Class & Style Binding, and Computed Properties
+                        </a>
+                        <a class="panel-block sort5110-3" href="vueFour">
+                            <span class="panel-icon">
+                                <i class="fab fa-vuejs"></i>
+                            </span>
+                            Vue 4 - Components
+                        </a>
+                        <a class="panel-block sort5110-3" href="vueFive.1/computed.html">
+                            <span class="panel-icon">
+                                <i class="fab fa-vuejs"></i>
+                            </span>
+                            Vue 5.1 - Computed Properties 1
+                        </a>
+                        <a class="panel-block sort5110-3" href="vueFive.2/studentDemo.html">
+                            <span class="panel-icon">
+                                <i class="fab fa-vuejs"></i>
+                            </span>
+                            Vue 5.2 - Computed Properties 2
+                        </a>
+                        <a class="panel-block sort5110-3" href="vue-Dawgs">
+                            <span class="panel-icon">
+                                <i class="fab fa-vuejs"></i>
+                            </span>
+                            Vue 6 - Dawgs
+                        </a>
+                        <a class="panel-block sort5110-3" href="vue-Cats">
+                            <span class="panel-icon">
+                                <i class="fab fa-vuejs"></i>
+                            </span>
+                            Vue 7 - Cats
+                        </a>
+                        <a class="panel-block sort5110-3" href="assignment-4">
+                            <span class="panel-icon">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </span>
+                            <strong class="has-text-link">Assignment 4</strong>
+                        </a>
+
+                        <!-- Misc -->
+                        <a class="panel-block sort5110-4" href="misc1">
+                            <span class="panel-icon">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </span>
+                            Miscellaneous 1 - Capturing User Location
+                        </a>
+
+                        <!-- Final -->
+                        <a class="panel-block sort5110-5" href="https://jacktowery.com/projects">
+                            <span class="panel-icon">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </span>
+                            <strong class="has-text-link">Final Project Part 1 - Projects</strong>
+                        </a>
+                        <a class="panel-block sort5110-5" href="https://jacktowery.com/photography">
+                            <span class="panel-icon">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </span>
+                            <strong class="has-text-link">Final Project Part 2 - Photography</strong>
+                        </a>
+                        <a class="panel-block sort5110-5" onclick="finalProject5110Modal()">
+                            <span class="panel-icon">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </span>
+                            Final Project Explanation
+                        </a>
+
+                    </article>
+                </div>
+                <div class="column is-one-third is-hidden-mobile">
+                    <div class="card" id="infoCard5110">
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="has-text-weight-bold" id="nmi-info-card-title">Section Title</p>
+                                <p id="nmi-info-card-text">This is a description of the currently selected category</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="final5110Modal">
+        <div class="modal-background" onclick="finalProject5110Modal()"></div>
+        <div class="modal-content">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        NMIX 5110 Final Project
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <p class="subtitle">Making my Portfolio using Vue.js</p>
+                        <p>For my final project, I chose to create a Projects page and a Photography page on my
+                            portfolio website using Vue.js.</p>
+                        <p class="has-text-weight-bold">Projects Page</p>
+                        <p>On the projects page, the projects are loaded from a local
+                            JSON file hosted on the server asynchronously by a Vue instance. The JSON is parsed for all
+                            of the project details to create card views and modal views when the cards are selected. The
+                            array of projects can be filtered by project type using methods of the Vue instance.</p>
+                        <p class="has-text-weight-bold">Photography Page</p>
+                        <p>On the photography page, the photos are loaded using the <span
+                                class="has-text-weight-bold">Flickr API</span> which collects photos from my
+                            personal Flickr account. The first query gets the info about where the file is hosted so
+                            that it can be downloaded, and a second query uses that info to retrieve the metadata of
+                            each photo to get its title and date. The JSON returned by the Flickr API is parsed to
+                            create the card views and setup a link to view the photo at full-resolution on Flickr when
+                            clicked.</p>
+                        <a class="button is-link" href="https://jacktowery.com/projects">View Projects Page</a>
+                        <a class="button is-link" href="https://jacktowery.com/photography">View Photography Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close" onclick="finalProject5110Modal()"></button>
+    </div>
+
+    <script src="indexJS.js"></script>
+</body>
+
+</html>

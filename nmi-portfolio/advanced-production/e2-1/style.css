@@ -1,0 +1,98 @@
+body, p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #494949;
+}
+
+ul.bg {
+    background-image: url(pattern1.png);
+    background-repeat: repeat;
+    background-position: 0 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+ul.bg li {
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 2px 2px #222222;
+}
+
+#me {
+    max-height: 150px;
+}
+
+a {
+    color: #019283;
+    text-decoration: none;
+}
+a:hover {
+    color: #494949;
+    text-decoration: underline;
+}
+
+table, tr {
+    width: 100%;
+    text-align: center;
+}
+
+.button {
+    border-radius: 10px;
+    border: 1px #494949;
+    padding: 8px;
+    color: #ffffff;
+    font-weight: 700;
+    background-color: #019283;
+    background-image: none;
+}
+.button:hover {
+    background-color: #494949;
+    text-decoration: underline;
+    color:#fff;
+}
+.button:focus {
+    background-color: #222222;
+    text-decoration: underline;
+}
+.button:active {
+    background-color: #494949;
+}
+.button:visited {
+    background-color: #004d45;
+}
+
+.fadeShort {
+    transition: 0.5s;
+}
+.fadeLong {
+    transition: 1s;
+}
+
+.b2:hover {
+    background-color: #019283;
+    background-image: url(pattern1.png);
+    background-repeat: repeat;
+    background-position: 0 0;
+}
+
+.b4:hover {
+    text-decoration: overline;
+    background-color: #ff00ff;
+}
+
+.b5:hover {
+    text-decoration: line-through;
+    background-color: #000000;
+    color: #494949;
+}
+
+.b6:hover {
+    background-image: linear-gradient(to right, red, blue)
+}
+
+@font-face {
+    font-family: "Kaushan Script";
+    src: url("KaushanScript-Regular.otf");
+}
+
+.alt-font {
+    font-family: "Kaushan Script", cursive;
+}

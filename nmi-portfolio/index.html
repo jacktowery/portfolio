@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="sr">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- ICONS & FAVICONS -->
+    <!-- Generic -->
+    <link rel="icon" href="../assets/icons/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../assets/icons/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="../assets/icons/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="../assets/icons/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="../assets/icons/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="../assets/icons/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="../assets/icons/favicon-228.png" sizes="228x228">
+    <!-- Android -->
+    <link rel="shortcut icon" sizes="196x196" href="../assets/icons/favicon-196.png">
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="../assets/icons/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="../assets/icons/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="../assets/icons/favicon-180.png" sizes="180x180">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/9aef0c2001.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157510538-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157510538-1');
+    </script>
+
+
+    <!-- Smooth scroll -->
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    // Store hash
+                    var hash = this.hash;
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+    <title>NMI Portfolio | Jack Towery</title>
+
+<body>
+    <div class="hero is-dark is-fullheight">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <span class="navbar-item">
+                            <a class="button is-primary is-inverted" href="/">
+                                <span class="icon">
+                                    <i class="fas fa-arrow-left"></i>
+                                </span>
+                                <span>Back to Portfolio</span>
+                            </a>
+                        </span>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item is-active">Main</a>
+                            <a class="navbar-item" href="/nmi-portfolio/rich-media-production/">Rich Media Production</a>
+                            <a class="navbar-item" href="/nmi-portfolio/rich-media-production/">Advanced Production</a>
+                            <a class="navbar-item" target="_blank" href="https://tallassee.mynmi.net">Capstone</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="hero-body">
+            <!--
+            <div class="container has-text-centered">
+                <p>Hello</p>
+                <div class="buttons are-large has-text-centered flex">
+                    <a href="/nmi-portfolio/rich-media-production/" class="button nmi-button is-primary is-outlined"><i class="fas fa-palette"></i>&nbsp; Rich Media Production (4310)</a>
+                    <a href="/nmi-portfolio/advanced-production/" class="button nmi-button is-primary is-outlined"><i class="fas fa-palette"></i>&nbsp; Advanced Production (5110)</a>
+                    <a href="/nmi-portfolio/capstone/" class="button nmi-button is-primary is-outlined"><i class="fas fa-palette"></i>&nbsp; Capstone (4510)</a>
+                </div>
+            </div>-->
+            <div class="container">
+                <div class="content has-text-centered">
+                    <h1 class="title is-family-secondary is-size-3-desktop is-size-4-mobile is-bold-700">My New Media Journey</h1>
+                    <h2 class="subtitle has-text-white is-size-5">Development Track</h2>
+                </div>
+                <div class="timeline is-centered">
+                    <div class="timeline-item">
+                        <div class="timeline-marker is-primary"></div>
+                        <div class="timeline-content">
+                            <p class="heading">April 30, 2020</p>
+                            <p><a href="http://mynmi.net/slam">NMI Space SLAM →</a></p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker is-primary is-icon has-text-white">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <p class="heading"><strong class="has-text-primary">Spring 2020</strong></p>
+                            <p>NMIX 4510 - New Media Capstone</p>
+                            <a class="button is-primary" target="_blank" href="https://tallassee.mynmi.net">View Capstone Project →</a>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker is-primary is-icon has-text-white">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <p class="heading"><strong class="has-text-primary">Fall 2019</strong></p>
+                            <p>NMIX 5110 - Advanced New Media Production</p>
+                            <a class="button is-primary" href="advanced-production/">View Exercises & Assignments →</a>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker is-primary"></div>
+                        <div class="timeline-content">
+                            <p class="heading">Spring 2019</p>
+                            <p>NMIX 4220/4221 - Brown Bag (New Media Topics)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker is-primary is-icon has-text-white">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <p class="heading"><strong class="has-text-primary">Fall 2018</strong></p>
+                            <p>NMIX 4310H - Rich Media Production</p>
+                            <a class="button is-primary" href="rich-media-production/">View Projects →</a>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker is-primary"></div>
+                        <div class="timeline-content">
+                            <p class="heading">Fall 2017</p>
+                            <p>CSCI 1302 - Software Development</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker is-primary"></div>
+                        <div class="timeline-content">
+                            <p class="heading">Spring 2017</p>
+                            <p>CSCI 1301 - Intro Programming</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

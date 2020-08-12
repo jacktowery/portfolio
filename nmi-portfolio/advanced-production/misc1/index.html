@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misc 1 - Getting User Location</title>
+    <meta name="author" content="Jack Towery">
+    <meta name="description" content="An exercise for NMIX 5110">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="coords"></div>
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image"><br><br>
+        <input type="text" name="note1" /> Name of Plant<br><br>
+        <textarea name="note2"></textarea> Notes<br><br>
+        <input type="hidden" id="lat" name="latitude">
+        <input type="hidden" id="long" name="longitude">
+        <button type="submit" id="sub">Submit</button>
+    </form>
+
+
+
+    <script>
+        coordsDisplay = document.querySelector("#coords");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showLocation);
+            } else {
+                console.log("Geolocation is not supported by this browser.")
+            }
+        }
+
+        function showLocation(whereAmI) {
+            let latPos = whereAmI.coords.latitude;
+            let longPos = whereAmI.coords.longitude;
+            console.log(latPos + ", " + longPos);
+            coordsDisplay.innerText = "Coordinates: (" + latPos + ", " + longPos + ")";
+            document.querySelector('#lat').value = latPos;
+            document.querySelector('#long').value = longPos;
+        }
+
+        setTimeout(function () {
+            getLocation();
+        }, 1000);
+    </script>
+</body>
+
+</html>

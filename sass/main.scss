@@ -545,6 +545,16 @@ progress.is-large+.progress-value {
     }
 }
 
+.checkpoint-card {
+    border-radius: 16px;
+    background-color: $grey;
+    color: #fff;
+
+    .button {
+        margin: 0.5rem;
+    }
+}
+
 // Grid
 
 #projects2 .box img {
@@ -690,6 +700,16 @@ span.tag:hover {
 .navbar-item img {
     max-height: 4rem !important;
 }
+
+//* ------------------------------------------------------
+//* NMI PORTFOLIO STUFF
+//* ------------------------------------------------------
+
+.nmi-button {
+    margin-bottom: 1.5rem !important;
+}
+
+
 
 //* ------------------------------------------------------
 //* ANIMATION HELPERS

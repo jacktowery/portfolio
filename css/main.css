@@ -7865,6 +7865,13 @@ progress.is-large + .progress-value {
   #projects2 .modal-card {
     width: 900px; } }
 
+.checkpoint-card {
+  border-radius: 16px;
+  background-color: #515A6B;
+  color: #fff; }
+  .checkpoint-card .button {
+    margin: 0.5rem; }
+
 #projects2 .box img {
   max-height: 300px;
   border-radius: 10px;
@@ -7981,6 +7988,9 @@ span.tag:hover {
 
 .navbar-item img {
   max-height: 4rem !important; }
+
+.nmi-button {
+  margin-bottom: 1.5rem !important; }
 
 .animate-loadTransparent {
   opacity: 0; }

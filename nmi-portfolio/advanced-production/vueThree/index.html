@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            width: 400px;
+        }
+
+        .longStyle {
+            background-color: black;
+            width: 400px;
+            color: white;
+        }
+
+        .shortStyle {
+            background-color: red;
+            width: 400px;
+        }
+    </style>
+    <title>Vue 3</title>
+</head>
+
+<body>
+    <div id="us">
+        <h1>{{title}}</h1>
+        <div v-for="eachStudent in yall"
+            :class="{longStyle: eachStudent.fact.length > 30, shortStyle: eachStudent.fact.length <= 30}">
+            <h2>{{eachStudent.stu_name}} {{eachStudent.last_name}}</h2>
+            {{eachStudent.fact}} <br>
+            <img :src="'http://' + eachStudent.domain + '/images/me.jpg'" />
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/youguys.js"></script>

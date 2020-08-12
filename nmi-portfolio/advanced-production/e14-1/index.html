@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E14 - Let's Play Cards</title>
+    <meta name="author" content="Jack Towery">
+    <meta name="description" content="An exercise for NMIX 5110">
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+</head>
+
+<body>
+    <h1>Let's Play Cards</h1>
+    <button onclick="shuffle(0)">shuffle</button><br>
+    <button onclick="reset()">reset</button><br>
+    <hr>
+    <h3>Player 1:</h3>
+    <button onclick="draw(0)">draw</button><br>
+    <div id="deck1"></div>
+    <hr>
+    <h3>Player 2:</h3>
+    <button onclick="draw(1)">draw</button><br>
+    <div id="deck2"></div>
+    <br>
+
+
+</body>
+
+</html>
+<script src="js/cards.js"></script>

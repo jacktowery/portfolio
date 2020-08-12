@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 3</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Jack Towery">
+    <meta name="description" content="An exercise for NMIX 5110">
+
+    <style>
+        .card {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        img {
+            image-orientation: vertical;
+        }
+    </style>
+
+    <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Assignment 3</h1>
+            <p class="subtitle">Extracting Classmate JSON Data</p>
+        </div>
+    </section>
+    <hr>
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline is-centered" id="studentView">
+            </div>
+        </div>
+    </section>
+
+    <script src="js/class.js"></script>
+</body>
+
+</html>

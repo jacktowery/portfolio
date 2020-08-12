@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Generic -->
+    <link rel="icon" href="logos/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="logos/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="logos/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="logos/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="logos/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="logos/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="logos/favicon-228.png" sizes="228x228">
+    <!-- Android -->
+    <link rel="shortcut icon" sizes="196x196" href="logos/favicon-196.png">
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="logos/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="logosfavicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="logos/favicon-180.png" sizes="180x180">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/9aef0c2001.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script>
+        // Mobile navbar script
+        $(document).ready(function () {
+
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function () {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+        });
+    </script>
+
+    <title>Project Info</title>
+</head>
+
+<body class="">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="logos/cat_full.svg" width="150">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary is-light" alt="Cats" href="index.html">
+                            <i class="fas fa-cat"></i>
+                        </a>
+                        <a class="button is-primary is-light" alt="Random" href="random.html">
+                            <i class="fas fa-random"></i>
+                        </a>
+                        <a class="button is-primary" alt="Info" href="info.html">
+                            <i class="fas fa-info-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="section">
+        <div class="container">
+            <div class="has-text-centered">
+                <!--replace with logo & actual title-->
+                <img src="logos/cat_full.svg" width="200">
+                <h2 class="subtitle is-italic">A project for NMIX 5110 by <a href="https://jacktowery.com">Jack
+                        Towery</a>
+                </h2>
+            </div>
+            <hr>
+
+            <h3 class="new-para subtitle has-text-weight-bold">How is the cat info gathered?</h3>
+            <p>
+                The info the cat breeds is collected through the <a href="https://thecatapi.com/">Cat API</a>, created
+                by Aden Foreshaw. First, in <code>loadNextImage()</code> a query is sent to the API using axios to get a
+                list of all the breeds of cats represented in the database. This query returns an array of JSON data.
+                For each entry in the array, the 4 letter ID of each cat breed is extracted in order to perform
+                additional queries for more breed info. For example, the ID <code>beng</code> corresponds to the Bengal
+                cat. After an array of all the breed IDs has been assembled, the Vue instance begins creating a card on
+                the page for each cat breed. As each card is created, a secondary query is made to the images search
+                function of the Cat API. Each of these queries is made by appending the query string
+                <code>search?breed_ids=</code> followed by each breed ID. These queries return more detailed info about
+                each breed, including their country of origin, temperament, and other traits.
+            </p>
+
+            <h3 class="new-para subtitle has-text-weight-bold">How do the image slideshows work?</h3>
+            <p>
+                An image slideshow with up to 10 pictures is displayed within each cat breed card. These images are
+                gathered from the image seach function of the Cat API. As each card is created, a new vue component
+                called <code>cat-slideshow</code> is created within the card. In the HTML code for the page, each
+                component is defined as follows: <code>
+                    &lt;cat-slideshow :catid="eachCat.breeds[0].id"&gt;&lt;/cat-slideshow&gt;</code>. Each component
+                has a custom property called <code>catid</code>, and the <code>:</code> binds the property to the ID
+                of each cat as the cards are created. The component takes in this ID, and uses it to perform its own
+                query to the image search function of the Cat API in <code>loadImages()</code>. This query will return
+                up to 10 unique images in an array of JSON data. Next, the <code>slideshow()</code> function is called
+                to get the first image URL from the array. In this function, the image URL at index <code>i</code> will
+                be pulled from the array and assigned to the <code>image</code> variable, and then the function will
+                update <code>i</code> for the next image pull. The button under the image slideshow is bound to this
+                function as well, and will move the slideshow to the next image when clicked.
+            </p>
+
+            <h3 class="new-para subtitle has-text-weight-bold">How was this web app built?</h3>
+            <p>
+                I built this web app using <a href="https://bulma.io" alt="Bulma">Bulma</a>, a free & open source CSS
+                framework that is based on CSS Flexbox principles. I prefer to use Bulma as an alternative to Bootstrap
+                due to the fact that it is a much more lightweight framework that is also easily customizable with
+                simple SASS injection. The main components of Bulma that I used for this project were the flexible &
+                responsive column layout, and simple cards. These elements, along with some custom styles I've added,
+                make this project responsive, so that it will also be easily viewable on mobile devices. Bulma is also
+                what I've chosen to build my <a href="https://jacktowery.com">Portfolio</a> with. Additionally, the
+                icons on this project are from <a href="https://fontawesome.com/">Font Awesome</a>, aside from the main
+                logo in the header.
+            </p>
+
+
+        </div>
+    </section>
+
+    <section class="section" id="footer">
+        <div class="content has-text-centered">
+            <p class="has-text-grey"><span class="has-text-weight-bold">Cats</span> by Jack Towery. &copy; 2019</p>
+            <a href="https://bulma.io">
+                <img src="https://bulma.io/images/made-with-bulma--black.png" alt="Made with Bulma" width="128"
+                    height="24">
+            </a>
+
+        </div>
+    </section>
+
+</body>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Generic -->
+    <link rel="icon" href="logos/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="logos/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="logos/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="logos/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="logos/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="logos/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="logos/favicon-228.png" sizes="228x228">
+    <!-- Android -->
+    <link rel="shortcut icon" sizes="196x196" href="logos/favicon-196.png">
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="logos/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="logosfavicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="logos/favicon-180.png" sizes="180x180">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/9aef0c2001.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script>
+        // Mobile navbar script
+        $(document).ready(function () {
+
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function () {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+        });
+    </script>
+
+    <title>Random Cats</title>
+</head>
+
+<body class="">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="logos/cat_full.svg" width="150">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary is-light" alt="Cats" href="index.html">
+                            <i class="fas fa-cat"></i>
+                        </a>
+                        <a class="button is-primary" alt="Random" href="random.html">
+                            <i class="fas fa-random"></i>
+                        </a>
+                        <a class="button is-primary is-light" alt="Info" href="info.html">
+                            <i class="fas fa-info-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered has-text-weight-bold">Random Cat Image</h1>
+            <div id="app2" class="has-text-centered">
+                <a :href="image" alt="Click to view full-size image">
+                    <img :src="image" class="random-image">
+                </a>
+                <br>
+                <button class="button is-info" v-on:click="loadRandomImage()"><i class="fas fa-random"></i>&nbsp;New
+                    Random Image</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="randomcat.js"></script>
+
+</body>

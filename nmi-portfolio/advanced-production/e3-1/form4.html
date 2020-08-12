@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="author" content="Jack Towery">
+    <meta name="description" content="An assignment for NMIX 5110">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap" rel="stylesheet">
+
+    <title>More Complex Form Elements</title>
+
+    <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
+    <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <header>Form Practice (4)</header>
+    <br>
+    <main>
+        <form id="form4" action="http://emuel.mynmi.net/db5/receiver.php" method=GET>
+            <div class="form-group">
+                <label for="yourname">Your Name:</label>
+                <input type="text" name="yourname" id="yourname">
+            </div>
+            <div class="form-group">
+                <label for="yourage">Your Age:</label>
+                <input type="text" name="yourage" id="yourage">
+            </div>
+            <div class="form-group">
+                <label for="hometown">Hometown:</label>
+                <input type="text" name="hometown" id="hometown">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+</body>
+
+</html>

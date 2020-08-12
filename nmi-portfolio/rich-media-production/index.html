@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- ICONS & FAVICONS -->
+    <!-- Generic -->
+    <link rel="icon" href="../../assets/icons/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../assets/icons/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="../../assets/icons/favicon-76.png" sizes="76x76">
+    <link rel="icon" href="../../assets/icons/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="../../assets/icons/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="../../assets/icons/favicon-192.png" sizes="192x192">
+    <link rel="icon" href="../../assets/icons/favicon-228.png" sizes="228x228">
+    <!-- Android -->
+    <link rel="shortcut icon" sizes="196x196" href="../../assets/icons/favicon-196.png">
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="../../assets/icons/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="../../assets/icons/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="../../assets/icons/favicon-180.png" sizes="180x180">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/9aef0c2001.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157510538-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157510538-1');
+    </script>
+
+
+    <!-- Smooth scroll -->
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    // Store hash
+                    var hash = this.hash;
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+    <title>Rich Media Production | Jack Towery</title>
+
+</head>
+
+<body>
+
+
+
+    <section class="section">
+        <a href="/nmi-portfolio/"><i class="fas fa-arrow-circle-left"></i>&nbsp; BACK</a>
+        <br><br>
+        <div class="container">
+            <img src="nmi-logo-small.png" class="is-pulled-left" alt="New Media Institute" style="margin-right: 1em;">
+            <h1 class="title">NMIX 4310 - Rich Media Production</h1>
+            <h2 class="subtitle">Projects Directory</h2>
+            <hr>
+        </div>
+
+
+        <div class="container">
+
+            <div class="columns is-centered">
+                <div class="column is-one-half">
+
+                    <article class="panel is-info">
+                        <p class="panel-heading">NMIX 4310: Rich Media Development</p>
+
+                        <a class="panel-block" href="https://www.behance.net/gallery/86149495/FinalPod-A-Podcast-App">
+                            <span class="panel-icon">
+                                <i class="fab fa-swift"></i>
+                            </span>
+                            Final Project - FinalPod
+                        </a>
+                        <a class="panel-block" href="https://www.behance.net/gallery/86202997/Song-Preview-Utility-An-iOS-App">
+                            <span class="panel-icon">
+                                <i class="fab fa-swift"></i>
+                            </span>
+                            Jukebox Project - Song Preview Utility
+                        </a>
+                        <a class="panel-block" href="https://www.behance.net/gallery/86211407/Wallpaper-Designer-An-iOS-App">
+                            <span class="panel-icon">
+                                <i class="fab fa-swift"></i>
+                            </span>
+                            Midterm Project - Wallpaper Designer
+                        </a>
+
+                    </article>
+                </div>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-one-half">
+                    <div class="card" id="infoCard4310">
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="has-text-weight-bold" id="nmi-info-card-title">My Rich Media Production Journey</p>
+                                <p id="nmi-info-card-text">In my Midterm project, I tied together a lot of basic concepts I learned in the preliminary assignments. In particular, I
+                                    used Tableviews, globally accessible data, and touch events. The app I created was a wallpaper designer. It allows users to switch patterns and
+                                    colors to create a custom wallpaper for their iOS device. I figured out how to hide certian UI elements so the user can screenshot the pattern
+                                    in order to use it.</p>
+                                <p id="nmi-info-card-text">In my Jukebox project, I built on concepts I learned from my Midterm projects and other assignments in-between to create
+                                    an app that plays previews of songs from iTunes. In particular, I used asynchronous events & downloads, API integration using the iTunes API,
+                                    and data parsing with MySQL and JSON data. This was my first app with ready access to the internet which I was very excited about. It is able to
+                                    communicate with external services to get data, and asynchronously download and parse it.</p>
+                                <p id="nmi-info-card-text">My final project was based heavily on my Jukebox project, especially due to their proximity in time. In my final project,
+                                    I built a fully-functioning podcast player app using asynchronous parsing of MySQL data, JSON data, RSS feeds, and XML data. The app uses the
+                                    iTunes API to get basic info about podcasts and the link to their RSS feeds, which are then subsequently parsed to get data about each podcast
+                                    episode. This was the culminaton of what I learned in my joruney through Rich Media Production, and I'd be confident submitting this final app
+                                    for approval and publishing on the iTunes store.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

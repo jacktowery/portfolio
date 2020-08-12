@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="author" content="Jack Towery">
+    <meta name="description" content="An assignment for NMIX 5110">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap" rel="stylesheet">
+
+    <title>More Complex Form Elements</title>
+
+    <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
+    <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <header>Form Practice (2)</header>
+    <br>
+    <main>
+        <form id="form2" action="showme.html" method=GET>
+            <div class="form-group">
+                <label for="classTime">Which NMIX 5110 class are you in?</label>
+                <select id="classTime" name="classTime">
+                    <option value="9:30AM - 10:45AM">9:30AM - 10:45AM</option>
+                    <option value="12:30PM - 1:45PM">12:30PM - 1:45PM</option>
+                    <option value="none">Not in 5110</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="college">What UGA college are you in?</label>
+                <input type="text" name="college" id="college" list="mySuggestions">
+                <datalist id="mySuggestions">
+                    <option>College of Agricultural and Environmental Sciences</option>
+                    <option>College of Education</option>
+                    <option>College of Engineering</option>
+                    <option>College of Environment and Design</option>
+                    <option>College of Family and Consumer Sciences</option>
+                    <option>College of Pharmacy</option>
+                    <option>College of Public Health</option>
+                    <option>College of Veterinary Medicine</option>
+                    <option>Franklin College of Arts and Sciences</option>
+                    <option>Graduate School</option>
+                    <option>Grady College of Journalism and Mass Communication</option>
+                    <option>Odum School of Ecology</option>
+                    <option>School of Law</option>
+                    <option>School of Public and International Affairs</option>
+                    <option>School of Social Work</option>
+                    <option>Terry College of Business</option>
+                    <option>The Warnell School of Forestry and Natural Resources</option>
+                </datalist>
+            </div>
+            <div class="form-group">
+                <label for="yearSelect">What year are you expected to graduate?</label>
+                <fieldset name="yearSelect" id="yearSelect">
+                    <legend>Class Of...</legend>
+                    <input type="radio" value="2019" name="year">
+                    <label for="2019">2019</label>
+
+                    <input type="radio" value="2020" name="year">
+                    <label for="2020">2020</label>
+
+                    <input type="radio" value="2021" name="year">
+                    <label for="2021">2021</label>
+
+                    <input type="radio" value="2022" name="year">
+                    <label for="2022">2022</label>
+
+                    <input type="radio" value="2023" name="year">
+                    <label for="2023">2023</label>
+
+                    <input type="radio" value="other" name="year">
+                    <label for="other">Other</label>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <label for="hours">How many credit hours are you taking this semester?</label>
+                <input type="number" min="0" max="20" name="hours">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+
+</body>
+
+</html>

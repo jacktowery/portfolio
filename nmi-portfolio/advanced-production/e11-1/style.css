@@ -1,0 +1,9 @@
+#square {
+    background-color: #000;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    transition: 0.5s;
+}

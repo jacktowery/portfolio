@@ -1,0 +1,56 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+body {
+    background-image: radial-gradient(red, orange, yellow, green, blue, indigo, violet);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+header::first-letter {
+    font-size: 44px;
+}
+header::first-line {
+    color: rgba(225, 0, 0, 100);
+}
+
+h2 {
+    transform: rotate(10deg);
+    margin-top: 150px;
+}
+
+.black-text {
+    color: #000000 !important;
+}
+
+.funky-font {
+    font-family: 'Chela One', cursive;
+}
+
+.funbox {
+    font-size: 30px;
+}
+
+#fb1 {
+    padding: 30px 30px 50px 30px;
+    border-radius: 20px;
+    background-color: rgb(174,194,124);
+    border: 16px ridge #0D1FC6;
+}
+
+#fb2 {
+    padding: 30px 30px 50px 30px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #514A39, #E6332F);
+    color: #ffffff !important;
+    text-shadow: 4px 4px #8A8C84;
+    border: 20px dashed #0000ff;
+    background-clip: padding-box;
+}

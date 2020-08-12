@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jack Towery">
+    <meta name="description" content="An exercise for NMIX 5110">
+
+    <link rel="stylesheet" href="ship.css">
+
+    <title>E11.2 - Space Ship!</title>
+</head>
+
+<body>
+    <button id="reverse" onclick="reverseShip()">Reverse Ship</button>
+    <div id="ship">
+        <div id="shipLight"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    let ship = document.querySelector('#ship');
+    let shipLight = document.querySelector('#shipLight');
+    var interval;
+
+    let howfar = 0;
+    let light = 0;
+    var direction = 0;
+    var rotate = 0;
+
+    function forward() {
+        clearInterval(interval);
+        interval = setInterval(function () {
+            howfar += 5;
+            if (howfar > window.innerWidth + 200) {
+                howfar = -300;
+            }
+            ship.style.left = howfar + "px";
+            light++;
+            if (light == 25) {
+                shipLight.style.backgroundColor = "#000000";
+            }
+            if (light == 50) {
+                shipLight.style.backgroundColor = "#ff0000";
+                light = 0;
+            }
+        }, 10);
+    }
+
+    function reverse() {
+        clearInterval(interval);
+        interval = setInterval(function () {
+            howfar -= 5;
+            if (howfar < -300) {
+                howfar = window.innerWidth - 200;
+            }
+            ship.style.left = howfar + "px";
+            light++;
+            if (light == 25) {
+                shipLight.style.backgroundColor = "#000000";
+            }
+            if (light == 50) {
+                shipLight.style.backgroundColor = "#ff0000";
+                light = 0;
+            }
+        }, 10);
+    }
+
+    function reverseShip() {
+        if (direction == 0) {
+            reverse();
+            direction = 1;
+            ship.style.transform = "rotateY(180deg)";
+        } else {
+            forward();
+            direction = 0;
+            ship.style.transform = "rotateY(00deg)";
+        }
+    }
+
+    forward();
+</script>

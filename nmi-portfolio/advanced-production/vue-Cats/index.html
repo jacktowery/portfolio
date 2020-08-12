@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <style>
+        .card {
+            max-width: 500px;
+            margin: 5rem;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+    </style>
+
+    <title>Cat Stuff</title>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Cat Breeds</h1>
+            <h4 class="subtitle has-text-centered">Using the <a href="https://thecatapi.com/">Cat API</a></h4>
+
+            <div class="columns is-centered">
+                <div class="column is-narrow">
+
+
+                    <div id="app" class="">
+                        <div v-for="eachCat in breeds" class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <a :href="eachCat.url" target="_blank">
+                                        <img :src="eachCat.url" style="max-width: 500px;">
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-4">{{eachCat.breeds[0].name}}</p>
+                                        <p class="subtitle is-6">{{eachCat.breeds[0].temperament}}</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p>{{eachCat.breeds[0].description}}</p>
+                                <br>
+                                <p class="label">Affection Level</p>
+                                <progress class="progress"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].affection_level > 3, 'is-warning': eachCat.breeds[0].affection_level == 3, 'is-danger': eachCat.breeds[0].affection_level < 3 }"
+                                    :value="eachCat.breeds[0].affection_level" max="5"></progress>
+                                <p class="label">Child Friendly</p>
+                                <progress class="progress"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].child_friendly > 3, 'is-warning': eachCat.breeds[0].child_friendly == 3, 'is-danger': eachCat.breeds[0].child_friendly < 3 }"
+                                    :value="eachCat.breeds[0].child_friendly" max="5"></progress>
+                                <p class="label">Dog Friendly</p>
+                                <progress class="progress"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].dog_friendly > 3, 'is-warning': eachCat.breeds[0].dog_friendly == 3, 'is-danger': eachCat.breeds[0].dog_friendly < 3 }"
+                                    :value="eachCat.breeds[0].dog_friendly" max="5"></progress>
+                                <p class="label">Energy Level</p>
+                                <progress class="progress"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].energy_level > 3, 'is-warning': eachCat.breeds[0].energy_level == 3, 'is-danger': eachCat.breeds[0].energy_level < 3 }"
+                                    :value="eachCat.breeds[0].energy_level" max="5"></progress>
+                                <p class="label">Intelligence</p>
+                                <progress class="progress"
+                                    v-bind:class="{ 'is-success': eachCat.breeds[0].intelligence > 3, 'is-warning': eachCat.breeds[0].intelligence == 3, 'is-danger': eachCat.breeds[0].intelligence < 3 }"
+                                    :value="eachCat.breeds[0].intelligence" max="5"></progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+<script src="kitty.js"></script>

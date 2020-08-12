@@ -1,0 +1,21 @@
+body, p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #494949;
+}
+
+ul li:hover {
+    color: #019283;
+}
+
+#me {
+    max-height: 150px;
+}
+
+a {
+    color: #019283;
+    text-decoration: none;
+}
+a:hover {
+    color: #494949;
+    text-decoration: underline;
+}
